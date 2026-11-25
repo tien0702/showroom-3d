@@ -1,0 +1,1327 @@
+{
+  "categories": [
+    {
+      "id": "sofa",
+      "label": "Sofa"
+    },
+    {
+      "id": "armchair",
+      "label": "Ghế đơn"
+    },
+    {
+      "id": "coffee-table",
+      "label": "Bàn trà"
+    },
+    {
+      "id": "tv-stand",
+      "label": "Kệ TV"
+    },
+    {
+      "id": "bed",
+      "label": "Giường"
+    },
+    {
+      "id": "nightstand",
+      "label": "Tab đầu giường"
+    },
+    {
+      "id": "storage",
+      "label": "Tủ & kệ"
+    },
+    {
+      "id": "dining",
+      "label": "Bàn ăn"
+    },
+    {
+      "id": "lighting",
+      "label": "Đèn"
+    },
+    {
+      "id": "rug",
+      "label": "Thảm"
+    },
+    {
+      "id": "decor",
+      "label": "Trang trí"
+    }
+  ],
+  "products": [
+    {
+      "sku": "SOFA-OSLO-200",
+      "slug": "sofa-oslo",
+      "name": "Sofa Oslo 2m",
+      "collection": "Bắc Âu",
+      "category": "sofa",
+      "price": 15900000,
+      "materials": {
+        "fabric": "#e7e0d3",
+        "wood": "#b08a5a"
+      },
+      "variants": [
+        {
+          "id": "cream",
+          "label": "Kem",
+          "swatch": "#e7e0d3",
+          "materials": {
+            "fabric": "#e7e0d3"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "stone",
+          "label": "Xám đá",
+          "swatch": "#9a9a96",
+          "materials": {
+            "fabric": "#9a9a96"
+          },
+          "priceDelta": 400000
+        },
+        {
+          "id": "moss",
+          "label": "Xanh rêu",
+          "swatch": "#6f7a62",
+          "materials": {
+            "fabric": "#6f7a62"
+          },
+          "priceDelta": 400000
+        },
+        {
+          "id": "charcoal",
+          "label": "Than",
+          "swatch": "#3c3c3c",
+          "materials": {
+            "fabric": "#3c3c3c"
+          },
+          "priceDelta": 600000
+        }
+      ],
+      "dimensions": {
+        "w": 2.0,
+        "d": 0.9,
+        "h": 0.82
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.5,
+        "rotationStep": 15
+      },
+      "model": "sofa",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/sofa-oslo.webp",
+        "gallery": [
+          "/images/products/sofa-oslo.webp",
+          "/images/products/sofa-oslo-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Khung gỗ sồi sấy",
+        "Đệm mút D40 bọc vải chống bám",
+        "Vỏ đệm tháo giặt được"
+      ]
+    },
+    {
+      "sku": "SOFA-MILAN-260",
+      "slug": "sofa-goc-milan",
+      "name": "Sofa góc Milan 2m6",
+      "collection": "Hiện đại",
+      "category": "sofa",
+      "price": 24500000,
+      "materials": {
+        "fabric": "#9a9a96",
+        "metal": "#2b2b2b"
+      },
+      "variants": [
+        {
+          "id": "cream",
+          "label": "Kem",
+          "swatch": "#e7e0d3",
+          "materials": {
+            "fabric": "#e7e0d3"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "stone",
+          "label": "Xám đá",
+          "swatch": "#9a9a96",
+          "materials": {
+            "fabric": "#9a9a96"
+          },
+          "priceDelta": 400000
+        },
+        {
+          "id": "moss",
+          "label": "Xanh rêu",
+          "swatch": "#6f7a62",
+          "materials": {
+            "fabric": "#6f7a62"
+          },
+          "priceDelta": 400000
+        },
+        {
+          "id": "charcoal",
+          "label": "Than",
+          "swatch": "#3c3c3c",
+          "materials": {
+            "fabric": "#3c3c3c"
+          },
+          "priceDelta": 600000
+        }
+      ],
+      "dimensions": {
+        "w": 2.6,
+        "d": 1.6,
+        "h": 0.8
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.5,
+        "rotationStep": 15
+      },
+      "model": "sofa-corner",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/sofa-goc-milan.webp",
+        "gallery": [
+          "/images/products/sofa-goc-milan.webp",
+          "/images/products/sofa-goc-milan-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Đảo chiều góc trái/phải",
+        "Chân thép sơn tĩnh điện",
+        "Ngồi sâu 60cm"
+      ]
+    },
+    {
+      "sku": "ARM-BO",
+      "slug": "ghe-don-bo",
+      "name": "Ghế đơn Bo bouclé",
+      "collection": "Bắc Âu",
+      "category": "armchair",
+      "price": 4300000,
+      "materials": {
+        "fabric": "#efe9de",
+        "wood": "#b08a5a"
+      },
+      "variants": [
+        {
+          "id": "ivory",
+          "label": "Ngà",
+          "swatch": "#efe9de",
+          "materials": {
+            "fabric": "#efe9de"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "sand",
+          "label": "Cát",
+          "swatch": "#d3c3a5",
+          "materials": {
+            "fabric": "#d3c3a5"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "cocoa",
+          "label": "Ca cao",
+          "swatch": "#7a5a44",
+          "materials": {
+            "fabric": "#7a5a44"
+          },
+          "priceDelta": 200000
+        }
+      ],
+      "dimensions": {
+        "w": 0.78,
+        "d": 0.8,
+        "h": 0.76
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.4,
+        "rotationStep": 15
+      },
+      "model": "armchair",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ghe-don-bo.webp",
+        "gallery": [
+          "/images/products/ghe-don-bo.webp",
+          "/images/products/ghe-don-bo-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Vải bouclé dày",
+        "Chân gỗ tần bì"
+      ]
+    },
+    {
+      "sku": "ARM-HOIAN",
+      "slug": "ghe-may-hoi-an",
+      "name": "Ghế mây Hội An",
+      "collection": "Indochine",
+      "category": "armchair",
+      "price": 3600000,
+      "materials": {
+        "wood": "#a77d4f",
+        "fabric": "#e9e2d2"
+      },
+      "variants": [
+        {
+          "id": "natural",
+          "label": "Mây tự nhiên",
+          "swatch": "#a77d4f",
+          "materials": {
+            "wood": "#a77d4f"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "dark",
+          "label": "Mây sẫm",
+          "swatch": "#5f4530",
+          "materials": {
+            "wood": "#5f4530"
+          },
+          "priceDelta": 200000
+        }
+      ],
+      "dimensions": {
+        "w": 0.7,
+        "d": 0.76,
+        "h": 0.8
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.4,
+        "rotationStep": 15
+      },
+      "model": "lounge-chair",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ghe-may-hoi-an.webp",
+        "gallery": [
+          "/images/products/ghe-may-hoi-an.webp",
+          "/images/products/ghe-may-hoi-an-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Đan mây thủ công",
+        "Kèm nệm ngồi"
+      ]
+    },
+    {
+      "sku": "CT-ROUND-80",
+      "slug": "ban-tra-tron",
+      "name": "Bàn trà tròn Sồi 80",
+      "collection": "Bắc Âu",
+      "category": "coffee-table",
+      "price": 3200000,
+      "materials": {
+        "wood": "#c9a274"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.8,
+        "d": 0.8,
+        "h": 0.4
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": 0.4,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "coffee-table-round",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ban-tra-tron.webp",
+        "gallery": [
+          "/images/products/ban-tra-tron.webp",
+          "/images/products/ban-tra-tron-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Gỗ sồi nguyên tấm",
+        "Hoàn thiện dầu lau"
+      ]
+    },
+    {
+      "sku": "CT-STONE-120",
+      "slug": "ban-tra-da",
+      "name": "Bàn trà đá Terra 1m2",
+      "collection": "Hiện đại",
+      "category": "coffee-table",
+      "price": 4800000,
+      "materials": {
+        "accent": "#d9d6cf",
+        "metal": "#2b2b2b"
+      },
+      "variants": [
+        {
+          "id": "travertine",
+          "label": "Travertine",
+          "swatch": "#d9d0bf",
+          "materials": {
+            "accent": "#d9d0bf"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "marble",
+          "label": "Đá trắng",
+          "swatch": "#eeeeec",
+          "materials": {
+            "accent": "#eeeeec"
+          },
+          "priceDelta": 500000
+        },
+        {
+          "id": "nero",
+          "label": "Đá đen",
+          "swatch": "#3a3a3a",
+          "materials": {
+            "accent": "#3a3a3a"
+          },
+          "priceDelta": 500000
+        }
+      ],
+      "dimensions": {
+        "w": 1.2,
+        "d": 0.6,
+        "h": 0.38
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": 0.38,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "coffee-table-rect",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ban-tra-da.webp",
+        "gallery": [
+          "/images/products/ban-tra-da.webp",
+          "/images/products/ban-tra-da-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Mặt đá nung kết",
+        "Chân thép"
+      ]
+    },
+    {
+      "sku": "TV-LUMI-180",
+      "slug": "ke-tv-lumi",
+      "name": "Kệ TV Lumi 1m8",
+      "collection": "Bắc Âu",
+      "category": "tv-stand",
+      "price": 5400000,
+      "materials": {
+        "wood": "#c9a274",
+        "metal": "#2b2b2b"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 1.8,
+        "d": 0.4,
+        "h": 0.5
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": 0.5,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 90
+      },
+      "model": "tv-stand",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ke-tv-lumi.webp",
+        "gallery": [
+          "/images/products/ke-tv-lumi.webp",
+          "/images/products/ke-tv-lumi-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Ngăn kéo ray giảm chấn",
+        "Lỗ đi dây phía sau"
+      ]
+    },
+    {
+      "sku": "BED-NAMI-160",
+      "slug": "giuong-nami",
+      "name": "Giường Nami 1m6",
+      "collection": "Japandi",
+      "category": "bed",
+      "price": 12500000,
+      "materials": {
+        "wood": "#c9a274",
+        "fabric": "#e9e4da"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 1.7,
+        "d": 2.1,
+        "h": 1.0
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.6,
+        "rotationStep": 90
+      },
+      "model": "bed",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/giuong-nami.webp",
+        "gallery": [
+          "/images/products/giuong-nami.webp",
+          "/images/products/giuong-nami-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Đầu giường bọc nỉ",
+        "Phản gỗ chịu lực 300kg",
+        "Không kèm nệm"
+      ]
+    },
+    {
+      "sku": "NS-KAI",
+      "slug": "tab-kai",
+      "name": "Tab đầu giường Kai",
+      "collection": "Japandi",
+      "category": "nightstand",
+      "price": 1800000,
+      "materials": {
+        "wood": "#c9a274"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.45,
+        "d": 0.4,
+        "h": 0.5
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": 0.5,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 90
+      },
+      "model": "nightstand",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/tab-kai.webp",
+        "gallery": [
+          "/images/products/tab-kai.webp",
+          "/images/products/tab-kai-angle.webp"
+        ]
+      },
+      "highlights": [
+        "1 ngăn kéo, 1 hộc mở"
+      ]
+    },
+    {
+      "sku": "WARD-SORA-100",
+      "slug": "tu-ao-sora",
+      "name": "Tủ áo Sora 2 cánh",
+      "collection": "Japandi",
+      "category": "storage",
+      "price": 9800000,
+      "materials": {
+        "wood": "#ecebe6",
+        "metal": "#b9a27a"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 1.0,
+        "d": 0.6,
+        "h": 2.0
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.7,
+        "rotationStep": 90
+      },
+      "model": "wardrobe",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/tu-ao-sora.webp",
+        "gallery": [
+          "/images/products/tu-ao-sora.webp",
+          "/images/products/tu-ao-sora-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Bản lề giảm chấn",
+        "Thanh treo + 3 ngăn"
+      ]
+    },
+    {
+      "sku": "SHELF-GRID-5",
+      "slug": "ke-sach-grid",
+      "name": "Kệ sách Grid 5 tầng",
+      "collection": "Hiện đại",
+      "category": "storage",
+      "price": 3900000,
+      "materials": {
+        "wood": "#c9a274",
+        "metal": "#2b2b2b"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.8,
+        "d": 0.35,
+        "h": 1.8
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": true,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 90
+      },
+      "model": "bookshelf",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ke-sach-grid.webp",
+        "gallery": [
+          "/images/products/ke-sach-grid.webp",
+          "/images/products/ke-sach-grid-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Khung thép, đợt gỗ",
+        "Chịu tải 20kg/tầng"
+      ]
+    },
+    {
+      "sku": "DT-MOC-160",
+      "slug": "ban-an-moc",
+      "name": "Bàn ăn Mộc 6 chỗ",
+      "collection": "Indochine",
+      "category": "dining",
+      "price": 8900000,
+      "materials": {
+        "wood": "#a77d4f"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 1.6,
+        "d": 0.9,
+        "h": 0.75
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": 0.75,
+        "mountHeight": null,
+        "clearanceFront": 0.6,
+        "rotationStep": 90
+      },
+      "model": "dining-table",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ban-an-moc.webp",
+        "gallery": [
+          "/images/products/ban-an-moc.webp",
+          "/images/products/ban-an-moc-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Gỗ tràm ghép thanh",
+        "Ngồi được 6 người"
+      ]
+    },
+    {
+      "sku": "DC-ECHO",
+      "slug": "ghe-an-echo",
+      "name": "Ghế ăn Echo",
+      "collection": "Bắc Âu",
+      "category": "dining",
+      "price": 1450000,
+      "materials": {
+        "wood": "#c9a274",
+        "fabric": "#d3c3a5"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.45,
+        "d": 0.5,
+        "h": 0.82
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "dining-chair",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/ghe-an-echo.webp",
+        "gallery": [
+          "/images/products/ghe-an-echo.webp",
+          "/images/products/ghe-an-echo-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Lưng uốn cong ôm người"
+      ]
+    },
+    {
+      "sku": "LAMP-ARC",
+      "slug": "den-cay-arc",
+      "name": "Đèn cây Arc",
+      "collection": "Hiện đại",
+      "category": "lighting",
+      "price": 1900000,
+      "materials": {
+        "metal": "#2b2b2b",
+        "accent": "#f4efe4"
+      },
+      "variants": [
+        {
+          "id": "black",
+          "label": "Đen",
+          "swatch": "#2b2b2b",
+          "materials": {
+            "metal": "#2b2b2b"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "brass",
+          "label": "Đồng",
+          "swatch": "#b9a27a",
+          "materials": {
+            "metal": "#b9a27a"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.4,
+        "d": 0.4,
+        "h": 1.65
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "floor-lamp",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/den-cay-arc.webp",
+        "gallery": [
+          "/images/products/den-cay-arc.webp",
+          "/images/products/den-cay-arc-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Bóng LED E27 ánh vàng"
+      ]
+    },
+    {
+      "sku": "LAMP-DOME",
+      "slug": "den-ban-dome",
+      "name": "Đèn bàn Dome",
+      "collection": "Bắc Âu",
+      "category": "lighting",
+      "price": 690000,
+      "materials": {
+        "accent": "#efe9de",
+        "wood": "#c9a274"
+      },
+      "variants": [
+        {
+          "id": "linen",
+          "label": "Lanh",
+          "swatch": "#efe9de",
+          "materials": {
+            "accent": "#efe9de"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "sage",
+          "label": "Xanh xám",
+          "swatch": "#a9b3a0",
+          "materials": {
+            "accent": "#a9b3a0"
+          },
+          "priceDelta": 0
+        }
+      ],
+      "dimensions": {
+        "w": 0.26,
+        "d": 0.26,
+        "h": 0.4
+      },
+      "rules": {
+        "placement": "onTop",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": false,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "table-lamp",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/den-ban-dome.webp",
+        "gallery": [
+          "/images/products/den-ban-dome.webp",
+          "/images/products/den-ban-dome-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Chụp vải lanh",
+        "Công tắc dây"
+      ]
+    },
+    {
+      "sku": "RUG-NORDIC-240",
+      "slug": "tham-nordic",
+      "name": "Thảm len Nordic 1m7 × 2m4",
+      "collection": "Bắc Âu",
+      "category": "rug",
+      "price": 2200000,
+      "materials": {
+        "fabric": "#e6dfd2",
+        "accent": "#b8ad9a"
+      },
+      "variants": [
+        {
+          "id": "oat",
+          "label": "Yến mạch",
+          "swatch": "#e6dfd2",
+          "materials": {
+            "fabric": "#e6dfd2"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "slate",
+          "label": "Xám",
+          "swatch": "#a3a3a0",
+          "materials": {
+            "fabric": "#a3a3a0"
+          },
+          "priceDelta": 0
+        }
+      ],
+      "dimensions": {
+        "w": 2.4,
+        "d": 1.7,
+        "h": 0.012
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": false,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 90
+      },
+      "model": "rug",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/tham-nordic.webp",
+        "gallery": [
+          "/images/products/tham-nordic.webp",
+          "/images/products/tham-nordic-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Len pha 70%",
+        "Chống trượt mặt dưới"
+      ]
+    },
+    {
+      "sku": "RUG-JUTE-160",
+      "slug": "tham-coi-tron",
+      "name": "Thảm cói tròn 1m6",
+      "collection": "Indochine",
+      "category": "rug",
+      "price": 1500000,
+      "materials": {
+        "fabric": "#c8b48a"
+      },
+      "variants": [
+        {
+          "id": "natural",
+          "label": "Cói tự nhiên",
+          "swatch": "#c8b48a",
+          "materials": {
+            "fabric": "#c8b48a"
+          },
+          "priceDelta": 0
+        }
+      ],
+      "dimensions": {
+        "w": 1.6,
+        "d": 1.6,
+        "h": 0.012
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": false,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "rug-round",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/tham-coi-tron.webp",
+        "gallery": [
+          "/images/products/tham-coi-tron.webp",
+          "/images/products/tham-coi-tron-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Đan cói thủ công"
+      ]
+    },
+    {
+      "sku": "PLANT-MONSTERA",
+      "slug": "cay-monstera",
+      "name": "Cây Monstera chậu gốm",
+      "collection": "Xanh",
+      "category": "decor",
+      "price": 850000,
+      "materials": {
+        "accent": "#e9e4da"
+      },
+      "variants": [
+        {
+          "id": "white",
+          "label": "Chậu trắng",
+          "swatch": "#e9e4da",
+          "materials": {
+            "accent": "#e9e4da"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "terracotta",
+          "label": "Chậu đất nung",
+          "swatch": "#b86b4b",
+          "materials": {
+            "accent": "#b86b4b"
+          },
+          "priceDelta": 0
+        }
+      ],
+      "dimensions": {
+        "w": 0.55,
+        "d": 0.55,
+        "h": 1.1
+      },
+      "rules": {
+        "placement": "floor",
+        "snapToWall": false,
+        "wallGap": 0.03,
+        "collides": true,
+        "surfaceHeight": null,
+        "mountHeight": null,
+        "clearanceFront": 0.0,
+        "rotationStep": 15
+      },
+      "model": "plant",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/cay-monstera.webp",
+        "gallery": [
+          "/images/products/cay-monstera.webp",
+          "/images/products/cay-monstera-angle.webp"
+        ]
+      },
+      "highlights": [
+        "Cây thật, giao kèm chậu"
+      ]
+    },
+    {
+      "sku": "ART-LINE-6090",
+      "slug": "tranh-line",
+      "name": "Tranh canvas Line 60×90",
+      "collection": "Nghệ thuật",
+      "category": "decor",
+      "price": 990000,
+      "materials": {
+        "wood": "#c9a274",
+        "accent": "#e9e2d6"
+      },
+      "variants": [
+        {
+          "id": "oak",
+          "label": "Sồi tự nhiên",
+          "swatch": "#c9a274",
+          "materials": {
+            "wood": "#c9a274"
+          },
+          "priceDelta": 0
+        },
+        {
+          "id": "walnut",
+          "label": "Óc chó",
+          "swatch": "#6b4a33",
+          "materials": {
+            "wood": "#6b4a33"
+          },
+          "priceDelta": 700000
+        },
+        {
+          "id": "white",
+          "label": "Trắng mờ",
+          "swatch": "#ecebe6",
+          "materials": {
+            "wood": "#ecebe6"
+          },
+          "priceDelta": 300000
+        }
+      ],
+      "dimensions": {
+        "w": 0.6,
+        "d": 0.03,
+        "h": 0.9
+      },
+      "rules": {
+        "placement": "wall",
+        "snapToWall": true,
+        "wallGap": 0.0,
+        "collides": false,
+        "surfaceHeight": null,
+        "mountHeight": 1.1,
+        "clearanceFront": 0.0,
+        "rotationStep": 90
+      },
+      "model": "wall-art",
+      "assets": {
+        "glb": null,
+        "usdz": null,
+        "thumb": "/images/products/tranh-line.webp",
+        "gallery": [
+          "/images/products/tranh-line.webp",
+          "/images/products/tranh-line-angle.webp"
+        ]
+      },
+      "highlights": [
+        "In canvas, khung gỗ"
+      ]
+    }
+  ]
+}

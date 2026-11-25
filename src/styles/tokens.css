@@ -1,0 +1,61 @@
+:root {
+  /* Colour */
+  --c-bg: #f6f5f2;
+  --c-surface: #ffffff;
+  --c-surface-2: #efede8;
+  --c-surface-3: #e6e3dc;
+  --c-ink: #17181a;
+  --c-ink-2: #4a4c50;
+  --c-ink-3: #6f7176;
+  --c-line: #e3e0d9;
+  --c-line-strong: #cfcac0;
+  --c-accent: #2f5bea;
+  --c-accent-ink: #ffffff;
+  --c-accent-soft: #e7edfd;
+  --c-danger: #d6453d;
+  --c-danger-soft: #fdecea;
+  --c-success: #1f7a4a;
+  --c-success-soft: #e5f4ec;
+
+  /* Type */
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-md: 15px;
+  --fs-lg: 18px;
+  --fs-xl: 24px;
+  --fs-2xl: clamp(28px, 3.2vw, 40px);
+  --fs-3xl: clamp(34px, 4.6vw, 56px);
+
+  /* Space & shape */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 56px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(23, 24, 26, 0.06), 0 1px 3px rgba(23, 24, 26, 0.05);
+  --shadow-2: 0 8px 24px rgba(23, 24, 26, 0.08);
+  --shadow-3: 0 24px 60px rgba(23, 24, 26, 0.16);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.2, 1.4, 0.4, 1);
+  --dur-fast: 150ms;
+  --dur-med: 260ms;
+  --dur-slow: 480ms;
+
+  /* Layout */
+  --header-h: 64px;
+  --content-max: 1320px;
+  --tap: 44px;
+}

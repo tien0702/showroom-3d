@@ -1,0 +1,870 @@
+{
+  "showrooms": [
+    {
+      "id": "nordic-living",
+      "name": "Phòng khách Bắc Âu",
+      "style": "Bắc Âu",
+      "kind": "living",
+      "cover": "/images/showrooms/nordic-living.webp",
+      "room": {
+        "id": "room-nordic",
+        "name": "Phòng khách",
+        "height": 2.8,
+        "corners": {
+          "c1": [
+            0,
+            0
+          ],
+          "c2": [
+            6.4,
+            0
+          ],
+          "c3": [
+            6.4,
+            4.4
+          ],
+          "c4": [
+            0,
+            4.4
+          ]
+        },
+        "walls": [
+          {
+            "id": "w1",
+            "from": "c1",
+            "to": "c2",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o1",
+                "type": "window",
+                "offset": 2.2,
+                "width": 1.8,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          },
+          {
+            "id": "w2",
+            "from": "c2",
+            "to": "c3",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o2",
+                "type": "door",
+                "offset": 3.2,
+                "width": 0.9,
+                "height": 2.1,
+                "sill": 0
+              }
+            ]
+          },
+          {
+            "id": "w3",
+            "from": "c3",
+            "to": "c4",
+            "thickness": 0.2,
+            "openings": []
+          },
+          {
+            "id": "w4",
+            "from": "c4",
+            "to": "c1",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o3",
+                "type": "window",
+                "offset": 1.4,
+                "width": 1.4,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          }
+        ],
+        "outline": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ],
+        "floor": {
+          "material": "oak-light",
+          "color": "#d8c4a6"
+        },
+        "wallColor": "#f2efe9"
+      },
+      "items": [
+        {
+          "uid": "i001",
+          "sku": "RUG-NORDIC-240",
+          "variant": "oat",
+          "position": [
+            2.5,
+            2.2
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i002",
+          "sku": "TV-LUMI-180",
+          "variant": "oak",
+          "position": [
+            0.33,
+            2.2
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i003",
+          "sku": "SOFA-OSLO-200",
+          "variant": "cream",
+          "position": [
+            4.45,
+            2.2
+          ],
+          "elevation": 0,
+          "rotationY": 270
+        },
+        {
+          "uid": "i004",
+          "sku": "CT-ROUND-80",
+          "variant": "oak",
+          "position": [
+            2.55,
+            2.2
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i005",
+          "sku": "ARM-BO",
+          "variant": "ivory",
+          "position": [
+            2.5,
+            0.95
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i006",
+          "sku": "LAMP-ARC",
+          "variant": "black",
+          "position": [
+            5.3,
+            1.0
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i007",
+          "sku": "PLANT-MONSTERA",
+          "variant": "white",
+          "position": [
+            0.55,
+            0.55
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i008",
+          "sku": "ART-LINE-6090",
+          "variant": "oak",
+          "position": [
+            2.5,
+            4.285
+          ],
+          "elevation": 1.1,
+          "rotationY": 180
+        }
+      ]
+    },
+    {
+      "id": "japandi-living",
+      "name": "Không gian mở Japandi",
+      "style": "Japandi",
+      "kind": "living",
+      "cover": "/images/showrooms/japandi-living.webp",
+      "room": {
+        "id": "room-japandi",
+        "name": "Phòng khách + ăn",
+        "height": 2.8,
+        "corners": {
+          "c1": [
+            0,
+            0
+          ],
+          "c2": [
+            5.2,
+            0
+          ],
+          "c3": [
+            5.2,
+            2.6
+          ],
+          "c4": [
+            8,
+            2.6
+          ],
+          "c5": [
+            8,
+            6
+          ],
+          "c6": [
+            0,
+            6
+          ]
+        },
+        "walls": [
+          {
+            "id": "w1",
+            "from": "c1",
+            "to": "c2",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o1",
+                "type": "window",
+                "offset": 2.4,
+                "width": 1.8,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          },
+          {
+            "id": "w2",
+            "from": "c2",
+            "to": "c3",
+            "thickness": 0.2,
+            "openings": []
+          },
+          {
+            "id": "w3",
+            "from": "c3",
+            "to": "c4",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o2",
+                "type": "door",
+                "offset": 1.6,
+                "width": 0.9,
+                "height": 2.1,
+                "sill": 0
+              }
+            ]
+          },
+          {
+            "id": "w4",
+            "from": "c4",
+            "to": "c5",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o3",
+                "type": "window",
+                "offset": 1.0,
+                "width": 1.6,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          },
+          {
+            "id": "w5",
+            "from": "c5",
+            "to": "c6",
+            "thickness": 0.2,
+            "openings": []
+          },
+          {
+            "id": "w6",
+            "from": "c6",
+            "to": "c1",
+            "thickness": 0.2,
+            "openings": []
+          }
+        ],
+        "outline": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ],
+        "floor": {
+          "material": "oak-natural",
+          "color": "#cbb08a"
+        },
+        "wallColor": "#efebe4"
+      },
+      "items": [
+        {
+          "uid": "i009",
+          "sku": "RUG-JUTE-160",
+          "variant": "natural",
+          "position": [
+            2.4,
+            3.0
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i010",
+          "sku": "SOFA-MILAN-260",
+          "variant": "stone",
+          "position": [
+            0.93,
+            3.0
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i011",
+          "sku": "CT-STONE-120",
+          "variant": "travertine",
+          "position": [
+            2.4,
+            3.0
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i012",
+          "sku": "SHELF-GRID-5",
+          "variant": "oak",
+          "position": [
+            1.3,
+            0.305
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i013",
+          "sku": "ARM-HOIAN",
+          "variant": "natural",
+          "position": [
+            3.7,
+            3.0
+          ],
+          "elevation": 0,
+          "rotationY": 270
+        },
+        {
+          "uid": "i014",
+          "sku": "PLANT-MONSTERA",
+          "variant": "terracotta",
+          "position": [
+            4.7,
+            0.55
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i015",
+          "sku": "LAMP-ARC",
+          "variant": "brass",
+          "position": [
+            0.5,
+            5.45
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i016",
+          "sku": "ART-LINE-6090",
+          "variant": "walnut",
+          "position": [
+            0.115,
+            3.0
+          ],
+          "elevation": 1.1,
+          "rotationY": 90
+        },
+        {
+          "uid": "i017",
+          "sku": "DT-MOC-160",
+          "variant": "oak",
+          "position": [
+            6.6,
+            4.6
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i018",
+          "sku": "DC-ECHO",
+          "variant": "oak",
+          "position": [
+            6.2,
+            3.88
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i019",
+          "sku": "DC-ECHO",
+          "variant": "oak",
+          "position": [
+            7.0,
+            3.88
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i020",
+          "sku": "DC-ECHO",
+          "variant": "oak",
+          "position": [
+            6.2,
+            5.32
+          ],
+          "elevation": 0,
+          "rotationY": 180
+        },
+        {
+          "uid": "i021",
+          "sku": "DC-ECHO",
+          "variant": "oak",
+          "position": [
+            7.0,
+            5.32
+          ],
+          "elevation": 0,
+          "rotationY": 180
+        }
+      ]
+    },
+    {
+      "id": "minimal-bedroom",
+      "name": "Phòng ngủ tối giản",
+      "style": "Tối giản",
+      "kind": "bedroom",
+      "cover": "/images/showrooms/minimal-bedroom.webp",
+      "room": {
+        "id": "room-bedroom",
+        "name": "Phòng ngủ",
+        "height": 2.8,
+        "corners": {
+          "c1": [
+            0,
+            0
+          ],
+          "c2": [
+            4,
+            0
+          ],
+          "c3": [
+            4,
+            3.6
+          ],
+          "c4": [
+            0,
+            3.6
+          ]
+        },
+        "walls": [
+          {
+            "id": "w1",
+            "from": "c1",
+            "to": "c2",
+            "thickness": 0.2,
+            "openings": []
+          },
+          {
+            "id": "w2",
+            "from": "c2",
+            "to": "c3",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o1",
+                "type": "window",
+                "offset": 0.9,
+                "width": 1.4,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          },
+          {
+            "id": "w3",
+            "from": "c3",
+            "to": "c4",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o2",
+                "type": "door",
+                "offset": 2.6,
+                "width": 0.9,
+                "height": 2.1,
+                "sill": 0
+              }
+            ]
+          },
+          {
+            "id": "w4",
+            "from": "c4",
+            "to": "c1",
+            "thickness": 0.2,
+            "openings": []
+          }
+        ],
+        "outline": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ],
+        "floor": {
+          "material": "oak-light",
+          "color": "#e0cfb4"
+        },
+        "wallColor": "#f1eee8"
+      },
+      "items": [
+        {
+          "uid": "i022",
+          "sku": "RUG-NORDIC-240",
+          "variant": "slate",
+          "position": [
+            2.0,
+            1.9
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i023",
+          "sku": "BED-NAMI-160",
+          "variant": "oak",
+          "position": [
+            2.0,
+            1.18
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i024",
+          "sku": "NS-KAI",
+          "variant": "oak",
+          "position": [
+            0.85,
+            0.33
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i025",
+          "sku": "NS-KAI",
+          "variant": "oak",
+          "position": [
+            3.15,
+            0.33
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i026",
+          "sku": "LAMP-DOME",
+          "variant": "linen",
+          "position": [
+            0.85,
+            0.33
+          ],
+          "elevation": 0.5,
+          "rotationY": 0
+        },
+        {
+          "uid": "i027",
+          "sku": "LAMP-DOME",
+          "variant": "linen",
+          "position": [
+            3.15,
+            0.33
+          ],
+          "elevation": 0.5,
+          "rotationY": 0
+        },
+        {
+          "uid": "i028",
+          "sku": "WARD-SORA-100",
+          "variant": "white",
+          "position": [
+            0.43,
+            2.4
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i029",
+          "sku": "ART-LINE-6090",
+          "variant": "oak",
+          "position": [
+            2.0,
+            0.115
+          ],
+          "elevation": 1.25,
+          "rotationY": 0
+        }
+      ]
+    },
+    {
+      "id": "studio-30",
+      "name": "Căn hộ Studio 30m²",
+      "style": "Hiện đại",
+      "kind": "studio",
+      "cover": "/images/showrooms/studio-30.webp",
+      "room": {
+        "id": "room-studio",
+        "name": "Studio",
+        "height": 2.8,
+        "corners": {
+          "c1": [
+            0,
+            0
+          ],
+          "c2": [
+            6,
+            0
+          ],
+          "c3": [
+            6,
+            5
+          ],
+          "c4": [
+            0,
+            5
+          ]
+        },
+        "walls": [
+          {
+            "id": "w1",
+            "from": "c1",
+            "to": "c2",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o1",
+                "type": "window",
+                "offset": 0.6,
+                "width": 1.4,
+                "height": 1.4,
+                "sill": 0.9
+              }
+            ]
+          },
+          {
+            "id": "w2",
+            "from": "c2",
+            "to": "c3",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o2",
+                "type": "window",
+                "offset": 1.6,
+                "width": 1.6,
+                "height": 1.4,
+                "sill": 0.85
+              }
+            ]
+          },
+          {
+            "id": "w3",
+            "from": "c3",
+            "to": "c4",
+            "thickness": 0.2,
+            "openings": [
+              {
+                "id": "o3",
+                "type": "door",
+                "offset": 2.0,
+                "width": 0.9,
+                "height": 2.1,
+                "sill": 0
+              }
+            ]
+          },
+          {
+            "id": "w4",
+            "from": "c4",
+            "to": "c1",
+            "thickness": 0.2,
+            "openings": []
+          }
+        ],
+        "outline": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ],
+        "floor": {
+          "material": "oak-natural",
+          "color": "#c9ad85"
+        },
+        "wallColor": "#f2efe9"
+      },
+      "items": [
+        {
+          "uid": "i030",
+          "sku": "BED-NAMI-160",
+          "variant": "walnut",
+          "position": [
+            4.75,
+            1.18
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i031",
+          "sku": "NS-KAI",
+          "variant": "walnut",
+          "position": [
+            3.6,
+            0.33
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i032",
+          "sku": "LAMP-DOME",
+          "variant": "sage",
+          "position": [
+            3.6,
+            0.33
+          ],
+          "elevation": 0.5,
+          "rotationY": 0
+        },
+        {
+          "uid": "i033",
+          "sku": "RUG-NORDIC-240",
+          "variant": "oat",
+          "position": [
+            1.9,
+            3.4
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i034",
+          "sku": "SOFA-OSLO-200",
+          "variant": "moss",
+          "position": [
+            0.58,
+            3.4
+          ],
+          "elevation": 0,
+          "rotationY": 90
+        },
+        {
+          "uid": "i035",
+          "sku": "CT-ROUND-80",
+          "variant": "walnut",
+          "position": [
+            1.9,
+            3.4
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i036",
+          "sku": "DT-MOC-160",
+          "variant": "walnut",
+          "position": [
+            2.2,
+            0.58
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i037",
+          "sku": "DC-ECHO",
+          "variant": "walnut",
+          "position": [
+            1.8,
+            1.32
+          ],
+          "elevation": 0,
+          "rotationY": 180
+        },
+        {
+          "uid": "i038",
+          "sku": "DC-ECHO",
+          "variant": "walnut",
+          "position": [
+            2.6,
+            1.32
+          ],
+          "elevation": 0,
+          "rotationY": 180
+        },
+        {
+          "uid": "i039",
+          "sku": "LAMP-ARC",
+          "variant": "black",
+          "position": [
+            1.4,
+            4.55
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i040",
+          "sku": "PLANT-MONSTERA",
+          "variant": "white",
+          "position": [
+            5.45,
+            2.6
+          ],
+          "elevation": 0,
+          "rotationY": 0
+        },
+        {
+          "uid": "i041",
+          "sku": "TV-LUMI-180",
+          "variant": "walnut",
+          "position": [
+            5.0,
+            4.67
+          ],
+          "elevation": 0,
+          "rotationY": 180
+        }
+      ]
+    }
+  ]
+}
