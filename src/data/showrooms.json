@@ -122,8 +122,8 @@
         },
         {
           "uid": "i003",
-          "sku": "SOFA-OSLO-200",
-          "variant": "cream",
+          "sku": "NM-SF15",
+          "variant": "grey",
           "position": [
             4.45,
             2.2
@@ -323,10 +323,10 @@
         },
         {
           "uid": "i010",
-          "sku": "SOFA-MILAN-260",
-          "variant": "stone",
+          "sku": "NM-SF01",
+          "variant": "light-grey",
           "position": [
-            0.93,
+            0.88,
             3.0
           ],
           "elevation": 0,
@@ -400,58 +400,14 @@
         },
         {
           "uid": "i017",
-          "sku": "DT-MOC-160",
-          "variant": "oak",
+          "sku": "NM-BA02",
+          "variant": "grey",
           "position": [
             6.6,
             4.6
           ],
           "elevation": 0,
           "rotationY": 0
-        },
-        {
-          "uid": "i018",
-          "sku": "DC-ECHO",
-          "variant": "oak",
-          "position": [
-            6.2,
-            3.88
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i019",
-          "sku": "DC-ECHO",
-          "variant": "oak",
-          "position": [
-            7.0,
-            3.88
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i020",
-          "sku": "DC-ECHO",
-          "variant": "oak",
-          "position": [
-            6.2,
-            5.32
-          ],
-          "elevation": 0,
-          "rotationY": 180
-        },
-        {
-          "uid": "i021",
-          "sku": "DC-ECHO",
-          "variant": "oak",
-          "position": [
-            7.0,
-            5.32
-          ],
-          "elevation": 0,
-          "rotationY": 180
         }
       ]
     },
@@ -557,11 +513,11 @@
         },
         {
           "uid": "i023",
-          "sku": "BED-NAMI-160",
-          "variant": "oak",
+          "sku": "NM-GN01",
+          "variant": "cream",
           "position": [
             2.0,
-            1.18
+            1.2
           ],
           "elevation": 0,
           "rotationY": 0
@@ -734,11 +690,11 @@
       "items": [
         {
           "uid": "i030",
-          "sku": "BED-NAMI-160",
-          "variant": "walnut",
+          "sku": "NM-GN12",
+          "variant": "grey",
           "position": [
-            4.75,
-            1.18
+            4.78,
+            1.2
           ],
           "elevation": 0,
           "rotationY": 0
@@ -778,8 +734,8 @@
         },
         {
           "uid": "i034",
-          "sku": "SOFA-OSLO-200",
-          "variant": "moss",
+          "sku": "NM-SF15",
+          "variant": "black",
           "position": [
             0.58,
             3.4

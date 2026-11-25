@@ -12,6 +12,7 @@ export type CategoryId =
   | 'nightstand'
   | 'storage'
   | 'dining'
+  | 'vanity'
   | 'lighting'
   | 'rug'
   | 'decor';

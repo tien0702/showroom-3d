@@ -51,6 +51,7 @@ export const NEUTRAL = {
   leafDark: new MeshStandardMaterial({ color: '#3c5536', roughness: 0.8 }),
   soil: new MeshStandardMaterial({ color: '#3a2e25', roughness: 1 }),
   ink: new MeshStandardMaterial({ color: '#2b2b2b', roughness: 0.7 }),
+  mirror: new MeshStandardMaterial({ color: '#c9d6dd', roughness: 0.12, metalness: 0.25 }),
   glowWarm: new MeshStandardMaterial({ color: '#fff6e0', emissive: '#ffd9a0', emissiveIntensity: 0.6, roughness: 0.9 }),
   books: ['#6f7a62', '#b86b4b', '#d3c3a5', '#3c3c3c', '#9a9a96'].map((c) => new MeshStandardMaterial({ color: c, roughness: 0.85 })),
 };

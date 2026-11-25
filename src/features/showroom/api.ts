@@ -32,7 +32,7 @@ export const ROOM_KIND_LABEL: Record<Showroom['kind'], string> = {
 /** Best showroom to preview a product in. */
 export function showroomFor(category: CategoryId): Showroom {
   const id =
-    category === 'bed' || category === 'nightstand'
+    category === 'bed' || category === 'nightstand' || category === 'vanity'
       ? 'minimal-bedroom'
       : category === 'dining'
         ? 'japandi-living'

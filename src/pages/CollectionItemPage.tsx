@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from 'motion/react';
 import { brand } from '@/app/config';
 import { CARE_NOTES, WARRANTY_NOTE, collection, discountPct, finalPrice } from '@/features/collection/api';
 import { CollectionCard } from '@/features/collection/CollectionCard';
+import { catalog } from '@/features/catalog/api';
+import { NM_SKU_PREFIX } from '@/features/collection/toProducts';
 import { Icons, ImageFrame, Price } from '@/shared/ui';
 import { useDocumentTitle } from '@/shared/hooks/useDocumentTitle';
 import s from './pages.module.css';
@@ -22,6 +24,7 @@ export default function CollectionItemPage() {
   const price = finalPrice(item);
   const off = discountPct(item);
   const related = collection.related(item);
+  const product3d = catalog.bySku(`${NM_SKU_PREFIX}${item.code}`);
 
   return (
     <div className="container">
@@ -96,6 +99,11 @@ export default function CollectionItemPage() {
             <dd>Tuỳ chọn theo yêu cầu</dd>
           </dl>
 
+          {product3d && (
+            <Link className={`${c.ctaLink} ${c.ctaAccent}`} to={`/products/${product3d.slug}`}>
+              <Icons.IconCube size={18} /> Xem 3D & thử trong phòng
+            </Link>
+          )}
           <div className={c.ctaRow}>
             <a className={`${c.ctaLink} ${c.ctaPrimary}`} href={`tel:${brand.hotlineTel}`}>
               <Icons.IconPhone size={18} /> Gọi {brand.hotline}

@@ -96,6 +96,24 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--sp-5);
 }
+.swipeHint {
+  display: none;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--sp-1);
+}
+.swipeHint span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-line-strong);
+  transition: width var(--dur-fast), background var(--dur-fast);
+}
+.swipeHint span[data-active] {
+  width: 18px;
+  border-radius: 3px;
+  background: var(--c-ink);
+}
 .roomCard {
   display: flex;
   flex-direction: column;
@@ -543,6 +561,37 @@
   }
 }
 @media (max-width: 640px) {
+  /* Room picker becomes a swipeable row on phones. */
+  .roomGrid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: var(--sp-3);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: max(20px, 4vw);
+    margin-inline: calc(max(20px, 4vw) * -1);
+    padding: 4px max(20px, 4vw) var(--sp-3);
+    scrollbar-width: none;
+  }
+  .roomGrid::-webkit-scrollbar {
+    display: none;
+  }
+  .roomGrid > * {
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+  .roomCard:hover {
+    transform: none;
+  }
+  .roomCta {
+    opacity: 1;
+    transform: none;
+  }
+  .swipeHint {
+    display: flex;
+  }
   .productGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--sp-6) var(--sp-3);

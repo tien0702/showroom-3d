@@ -38,7 +38,7 @@ for (const p of catalog.products) {
   await shot(`/__capture?sku=${p.sku}&az=-50`, `products/${p.slug}-angle.webp`, { width: 800, height: 800 });
 }
 for (const s of showrooms.showrooms) {
-  if (only && !s.id.includes(only)) continue;
+  if (only && only !== "rooms" && !s.id.includes(only)) continue;
   await shot(`/__capture?room=${s.id}`, `showrooms/${s.id}.webp`, { width: 1200, height: 900 }, true);
 }
 await browser.close();

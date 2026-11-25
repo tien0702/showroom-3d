@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import type { FurnishLevel, RoomKind } from '@/types';
@@ -24,6 +24,23 @@ export default function ShowroomsPage() {
   const rooms = useMemo(() => showroomApi.list().filter((r) => kind === 'all' || r.kind === kind), [kind]);
   const kinds = useMemo(() => [...new Set(showroomApi.list().map((r) => r.kind))], []);
   const featured = catalog.products().slice(0, 4);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  // Track which room is in view while swiping on phones (drives the dots).
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const first = el.firstElementChild as HTMLElement | null;
+      if (!first) return;
+      setActive(Math.round(el.scrollLeft / (first.offsetWidth + parseFloat(getComputedStyle(el).columnGap || '0'))));
+    };
+    el.scrollTo({ left: 0 });
+    setActive(0);
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [kind]);
 
   return (
     <div className="container">
@@ -43,7 +60,7 @@ export default function ShowroomsPage() {
         ))}
       </div>
 
-      <motion.div layout className={s.roomGrid}>
+      <motion.div layout ref={gridRef} className={s.roomGrid}>
         <AnimatePresence mode="popLayout">
           {rooms.map((r, i) => {
             const n = furnish(r, level).length;
@@ -74,6 +91,13 @@ export default function ShowroomsPage() {
           })}
         </AnimatePresence>
       </motion.div>
+      {rooms.length > 1 && (
+        <div className={s.swipeHint} aria-hidden>
+          {rooms.map((r, i) => (
+            <span key={r.id} data-active={i === active || undefined} />
+          ))}
+        </div>
+      )}
 
       <section className={s.section}>
         <div className={s.sectionHead}>

@@ -1,13 +1,21 @@
 import data from '@/data/catalog.json';
 import { withBase } from '@/lib/withBase';
+import { collection } from '@/features/collection/api';
+import { toProduct } from '@/features/collection/toProducts';
 import type { Category, CategoryId, Product, Variant } from '@/types';
 
 /**
  * Catalog data access. Reads bundled sample data today;
  * swap the bodies for API calls when a backend exists — callers stay the same.
  */
-const products = withBase(data.products) as unknown as Product[];
-const categories = data.categories as Category[];
+const ngocMinh = collection
+  .items()
+  .map(toProduct)
+  .filter((p): p is Product => p !== null);
+/** Ngọc Minh products first, then the sample 3D catalogue. */
+const products = [...ngocMinh, ...(withBase(data.products) as unknown as Product[])];
+const categories = [...(data.categories as Category[])];
+categories.splice(categories.findIndex((c) => c.id === 'dining') + 1, 0, { id: 'vanity', label: 'Bàn trang điểm' });
 const bySku = new Map(products.map((p) => [p.sku, p]));
 const bySlug = new Map(products.map((p) => [p.slug, p]));
 

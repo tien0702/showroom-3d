@@ -46,6 +46,7 @@ function SofaCorner({ dims: { w, d, h }, m }: ModelProps) {
   const chaise = 0.95;
   const legH = 0.08;
   const baseY = legH + 0.14;
+  const backCount = Math.max(2, Math.round((w - 0.4) / 0.7));
   return (
     <group>
       <Box p={[0, legH + 0.07, -d / 2 + depth / 2]} s={[w, 0.14, depth]} m={m.fabric} r={0.03} />
@@ -54,9 +55,10 @@ function SofaCorner({ dims: { w, d, h }, m }: ModelProps) {
       <Box p={[w / 2 - chaise / 2, baseY + 0.09, 0.08]} s={[chaise - 0.04, 0.18, d - 0.3]} m={m.fabric} r={0.06} />
       <Box p={[0, (baseY + h) / 2, -d / 2 + 0.11]} s={[w, h - baseY, 0.22]} m={m.fabric} r={0.06} />
       <Box p={[-w / 2 + 0.08, (legH + h * 0.62) / 2, -d / 2 + depth / 2]} s={[0.16, h * 0.62 - legH, depth]} m={m.fabric} r={0.06} />
-      {[-0.9, -0.2, 0.5].map((x) => (
-        <Box key={x} p={[x, baseY + 0.38, -d / 2 + 0.3]} s={[0.6, 0.36, 0.16]} m={m.fabric} r={0.07} rot={[-0.18, 0, 0]} />
-      ))}
+      {Array.from({ length: backCount }, (_, i) => {
+        const cw = (w - 0.4) / backCount;
+        return <Box key={i} p={[-w / 2 + 0.2 + cw * (i + 0.5), baseY + 0.38, -d / 2 + 0.3]} s={[cw - 0.08, 0.36, 0.16]} m={m.fabric} r={0.07} rot={[-0.18, 0, 0]} />;
+      })}
       {([[-w / 2 + 0.06, -d / 2 + 0.06], [w / 2 - 0.06, -d / 2 + 0.06], [w / 2 - 0.06, d / 2 - 0.06], [-w / 2 + 0.06, -d / 2 + depth - 0.06], [w / 2 - chaise + 0.06, d / 2 - 0.06]] as const).map(([x, z], i) => (
         <Cyl key={i} p={[x, legH / 2, z]} r={0.02} h={legH} m={m.metal} seg={10} />
       ))}
@@ -320,6 +322,65 @@ function WallArt({ dims: { w, d, h }, m }: ModelProps) {
   );
 }
 
+/** Upholstered dining chair with metal legs (Ngọc Minh dining sets). Pivot bottom-centre, faces +Z. */
+function UpholsteredChair({ m }: { m: SlotMaterials }) {
+  const w = 0.46;
+  const d = 0.5;
+  const seat = 0.47;
+  return (
+    <group>
+      <Legs w={w - 0.04} d={d - 0.06} h={seat - 0.05} m={m.metal} r={0.014} inset={0.04} taper={1} />
+      <Box p={[0, seat - 0.03, 0.02]} s={[w, 0.08, d - 0.04]} m={m.fabric} r={0.03} />
+      <Box p={[0, seat + 0.2, -d / 2 + 0.05]} s={[w - 0.02, 0.42, 0.07]} m={m.fabric} r={0.03} rot={[-0.08, 0, 0]} />
+    </group>
+  );
+}
+
+/** Table with chairs along both long sides. `chairs` is the total count (4 or 6). */
+function makeDiningSet(chairs: number) {
+  return function DiningSet({ dims: { w, d }, m }: ModelProps) {
+    const tableH = 0.75;
+    const tableD = chairs > 4 ? 0.9 : 0.8;
+    const perSide = chairs / 2;
+    const step = w / perSide;
+    const chairZ = d / 2 - 0.25;
+    return (
+      <group>
+        <Box p={[0, tableH - 0.02, 0]} s={[w, 0.04, tableD]} m={m.accent} r={0.01} />
+        <Box p={[0, tableH - 0.06, 0]} s={[w - 0.2, 0.04, tableD - 0.2]} m={m.metal} />
+        <Legs w={w - 0.1} d={tableD - 0.1} h={tableH - 0.08} m={m.metal} r={0.022} inset={0.05} taper={1} />
+        {[-1, 1].flatMap((side) =>
+          Array.from({ length: perSide }, (_, i) => (
+            <group key={`${side}${i}`} position={[-w / 2 + step * (i + 0.5), 0, side * chairZ]} rotation={[0, side > 0 ? Math.PI : 0, 0]}>
+              <UpholsteredChair m={m} />
+            </group>
+          )),
+        )}
+      </group>
+    );
+  };
+}
+
+/** Dressing table: drawer desk, framed mirror and a stool tucked underneath. */
+function Vanity({ dims: { w, d, h }, m }: ModelProps) {
+  const top = 0.75;
+  const mirrorW = Math.min(0.6, w * 0.6);
+  const mirrorH = h - top - 0.06;
+  return (
+    <group>
+      <Legs w={w - 0.04} d={d - 0.04} h={top - 0.18} m={m.metal} r={0.016} inset={0.04} taper={1} />
+      <Box p={[0, top - 0.09, 0]} s={[w, 0.18, d]} m={m.wood} r={0.012} />
+      {[-1, 1].map((sgn) => (
+        <Box key={sgn} p={[(sgn * w) / 4, top - 0.09, d / 2 + 0.006]} s={[0.1, 0.012, 0.012]} m={m.metal} r={0.004} />
+      ))}
+      <Box p={[0, top + mirrorH / 2 + 0.02, -d / 2 + 0.06]} s={[mirrorW + 0.06, mirrorH, 0.03]} m={m.wood} r={0.02} />
+      <Box p={[0, top + mirrorH / 2 + 0.02, -d / 2 + 0.077]} s={[mirrorW, mirrorH - 0.06, 0.006]} m={NEUTRAL.mirror} />
+      <Cyl p={[0, 0.2, d / 2 - 0.2]} r={0.016} h={0.4} m={m.metal} seg={10} />
+      <Cyl p={[0, 0.43, d / 2 - 0.2]} r={0.17} h={0.07} m={m.fabric} />
+    </group>
+  );
+}
+
 export const MODEL_REGISTRY: Record<string, ComponentType<ModelProps>> = {
   sofa: Sofa,
   'sofa-corner': SofaCorner,
@@ -329,6 +390,9 @@ export const MODEL_REGISTRY: Record<string, ComponentType<ModelProps>> = {
   'coffee-table-rect': CoffeeTableRect,
   'tv-stand': TvStand,
   bed: Bed,
+  vanity: Vanity,
+  'dining-set-4': makeDiningSet(4),
+  'dining-set-6': makeDiningSet(6),
   nightstand: Nightstand,
   wardrobe: Wardrobe,
   bookshelf: Bookshelf,
