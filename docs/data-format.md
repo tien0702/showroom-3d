@@ -14,49 +14,31 @@ Nguồn chuẩn là các kiểu TypeScript trong `src/types/`. Tài liệu này 
 | Góc | độ, quay quanh trục Y (giống `object.rotation.y` của three.js) |
 | ID | `sku` viết HOA-gạch-ngang; `slug`, `id` viết thường-gạch-ngang |
 
-## `catalog.json`
+## `collection.json`
+
+Danh sách sản phẩm Ngọc Minh (lấy từ website cũ). Đây là nguồn dữ liệu duy nhất cho sản phẩm.
 
 ```jsonc
 {
-  "categories": [{ "id": "sofa", "label": "Sofa" }],
+  "categories": [{ "id": "sofa", "label": "Sofa phòng khách" }],
   "products": [
     {
-      "sku": "SOFA-OSLO-200",
-      "slug": "sofa-oslo",
-      "name": "Sofa Oslo 2m",
-      "collection": "Bắc Âu",
-      "category": "sofa",
-      "price": 15900000,
-      "materials": { "fabric": "#e7e0d3", "wood": "#b08a5a" },     // màu mặc định theo slot
-      "variants": [
-        { "id": "cream", "label": "Kem", "swatch": "#e7e0d3",
-          "materials": { "fabric": "#e7e0d3" }, "priceDelta": 0 }
-      ],
-      "dimensions": { "w": 2.0, "d": 0.9, "h": 0.82 },
-      "rules": {
-        "placement": "floor",        // floor | wall | onTop
-        "snapToWall": true,          // áp lưng vào tường khi kéo lại gần (< 25 cm)
-        "wallGap": 0.03,             // khe hở giữa lưng và tường
-        "collides": true,            // false cho thảm, đồ treo tường, đồ đặt lên mặt bàn
-        "surfaceHeight": null,       // bàn/kệ: độ cao mặt trên để đồ onTop đặt lên
-        "mountHeight": null,         // đồ treo tường: độ cao mép dưới
-        "clearanceFront": 0.5,       // khoảng trống nên chừa phía trước
-        "rotationStep": 15           // bước xoay (độ)
-      },
-      "model": "sofa",               // khoá model dựng bằng code, dùng khi chưa có GLB
-      "assets": {
-        "glb": null,                 // "/models/sofa-oslo.glb"
-        "usdz": null,                // cho AR trên iPhone
-        "thumb": "/images/products/sofa-oslo.webp",
-        "gallery": ["/images/products/sofa-oslo.webp", "/images/products/sofa-oslo-angle.webp"]
-      },
-      "highlights": ["Khung gỗ sồi sấy"]
+      "code": "SF01",                 // mã sản phẩm; SKU 3D là "NM-SF01"
+      "slug": "sf01",
+      "name": "Sofa Phòng Khách Góc L",
+      "category": "sofa",             // sofa | bed | dining | vanity
+      "size": "2.8m x 1.7m",          // dùng để dựng kích thước 3D
+      "material": "Vải",
+      "price": 14900000,              // giá gốc, null = liên hệ
+      "salePrice": 9900000,           // giá khuyến mãi, null nếu không có
+      "images": ["/images/ngoc-minh/sf01-1.webp"],
+      "details": ["Khung gỗ dầu sấy…"]
     }
   ]
 }
 ```
 
-Các slot vật liệu: `fabric`, `wood`, `metal`, `accent`. Variant chỉ ghi đè những slot nó khai báo.
+Sản phẩm 3D được sinh tự động từ file này trong `src/features/collection/toProducts.ts` (chọn model, kích thước, màu tuỳ chọn, luật đặt đồ). Sản phẩm không có giá sẽ không xuất hiện trong showroom 3D.
 
 ## `showrooms.json`
 

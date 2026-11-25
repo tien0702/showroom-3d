@@ -49,7 +49,7 @@ export const useCart = create<CartState>()(
       clear: () => set({ lines: [] }),
       setOpen: (open) => set({ open }),
     }),
-    { name: 'hearth.cart.v1', partialize: (s) => ({ lines: s.lines }) },
+    { name: 'ngocminh.cart.v1', partialize: (s) => ({ lines: s.lines }) },
   ),
 );
 

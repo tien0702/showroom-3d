@@ -28,7 +28,6 @@
       "price": 10000000,
       "salePrice": 7800000,
       "images": [
-        "/images/ngoc-minh/ba01-1.webp",
         "/images/ngoc-minh/ba01-1.webp"
       ],
       "details": [
@@ -49,7 +48,6 @@
       "price": 10000000,
       "salePrice": 7800000,
       "images": [
-        "/images/ngoc-minh/ba02-1.webp",
         "/images/ngoc-minh/ba02-1.webp"
       ],
       "details": [
@@ -71,7 +69,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba03-1.webp",
         "/images/ngoc-minh/ba03-1.webp"
       ],
       "details": [
@@ -94,8 +91,7 @@
       "salePrice": 3800000,
       "images": [
         "/images/ngoc-minh/ba04-1.webp",
-        "/images/ngoc-minh/ba01-1.webp",
-        "/images/ngoc-minh/ba04-1.webp"
+        "/images/ngoc-minh/ba01-1.webp"
       ],
       "details": [
         "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
@@ -116,7 +112,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba05-1.webp",
         "/images/ngoc-minh/ba05-1.webp"
       ],
       "details": [
@@ -138,7 +133,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba06-1.webp",
         "/images/ngoc-minh/ba06-1.webp"
       ],
       "details": [
@@ -160,7 +154,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba07-1.webp",
         "/images/ngoc-minh/ba07-1.webp"
       ],
       "details": [
@@ -182,7 +175,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba08-1.webp",
         "/images/ngoc-minh/ba08-1.webp"
       ],
       "details": [
@@ -204,7 +196,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba09-1.webp",
         "/images/ngoc-minh/ba09-1.webp"
       ],
       "details": [
@@ -226,7 +217,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba10-1.webp",
         "/images/ngoc-minh/ba10-1.webp"
       ],
       "details": [
@@ -248,7 +238,6 @@
       "price": 6000000,
       "salePrice": 3800000,
       "images": [
-        "/images/ngoc-minh/ba11-1.webp",
         "/images/ngoc-minh/ba11-1.webp"
       ],
       "details": [
@@ -397,7 +386,6 @@
       "salePrice": null,
       "images": [
         "/images/ngoc-minh/gn10-1.webp",
-        "/images/ngoc-minh/gn10-1.webp",
         "/images/ngoc-minh/gn10-3.webp"
       ],
       "details": [
@@ -446,7 +434,6 @@
       "salePrice": 9900000,
       "images": [
         "/images/ngoc-minh/sf01-1.webp",
-        "/images/ngoc-minh/sf01-1.webp",
         "/images/ngoc-minh/sf01-3.webp",
         "/images/ngoc-minh/sf01-4.webp",
         "/images/ngoc-minh/sf01-5.webp",
@@ -471,7 +458,6 @@
       "price": 14900000,
       "salePrice": null,
       "images": [
-        "/images/ngoc-minh/sf02-1.webp",
         "/images/ngoc-minh/sf02-1.webp"
       ],
       "details": [
@@ -493,7 +479,6 @@
       "price": 14900000,
       "salePrice": null,
       "images": [
-        "/images/ngoc-minh/sf03-1.webp",
         "/images/ngoc-minh/sf03-1.webp",
         "/images/ngoc-minh/sf03-3.webp",
         "/images/ngoc-minh/sf03-4.webp",
@@ -542,7 +527,6 @@
       "price": 19900000,
       "salePrice": 12900000,
       "images": [
-        "/images/ngoc-minh/sf05-1.webp",
         "/images/ngoc-minh/sf05-1.webp"
       ],
       "details": [
@@ -564,7 +548,6 @@
       "price": 21000000,
       "salePrice": 16900000,
       "images": [
-        "/images/ngoc-minh/sf06-1.webp",
         "/images/ngoc-minh/sf06-1.webp"
       ],
       "details": [
@@ -586,7 +569,6 @@
       "price": 17900000,
       "salePrice": 13900000,
       "images": [
-        "/images/ngoc-minh/sf07-1.webp",
         "/images/ngoc-minh/sf07-1.webp"
       ],
       "details": [
@@ -609,8 +591,7 @@
       "salePrice": 12900000,
       "images": [
         "/images/ngoc-minh/sf08-1.webp",
-        "/images/ngoc-minh/sf08-2.webp",
-        "/images/ngoc-minh/sf08-1.webp"
+        "/images/ngoc-minh/sf08-2.webp"
       ],
       "details": [
         "Kiểu dáng: Kiểu Sofa hình chữ L cao cấp (3.2m x 1.7m)",
@@ -631,7 +612,6 @@
       "price": 21900000,
       "salePrice": 17900000,
       "images": [
-        "/images/ngoc-minh/sf09-1.webp",
         "/images/ngoc-minh/sf09-1.webp"
       ],
       "details": [
@@ -654,7 +634,6 @@
       "price": 25000000,
       "salePrice": 19900000,
       "images": [
-        "/images/ngoc-minh/sf10-1.webp",
         "/images/ngoc-minh/sf10-1.webp"
       ],
       "details": [
@@ -677,7 +656,6 @@
       "price": 18900000,
       "salePrice": 14900000,
       "images": [
-        "/images/ngoc-minh/sf11-1.webp",
         "/images/ngoc-minh/sf11-1.webp"
       ],
       "details": [
@@ -699,7 +677,6 @@
       "price": 19900000,
       "salePrice": 15900000,
       "images": [
-        "/images/ngoc-minh/sf12-1.webp",
         "/images/ngoc-minh/sf12-1.webp"
       ],
       "details": [
@@ -721,7 +698,6 @@
       "price": 19900000,
       "salePrice": 15900000,
       "images": [
-        "/images/ngoc-minh/sf13-1.webp",
         "/images/ngoc-minh/sf13-1.webp"
       ],
       "details": [
@@ -743,7 +719,6 @@
       "price": 25000000,
       "salePrice": 21900000,
       "images": [
-        "/images/ngoc-minh/sf14-1.webp",
         "/images/ngoc-minh/sf14-1.webp"
       ],
       "details": [
@@ -765,7 +740,6 @@
       "price": 13500000,
       "salePrice": 9500000,
       "images": [
-        "/images/ngoc-minh/sf15-1.webp",
         "/images/ngoc-minh/sf15-1.webp"
       ],
       "details": [
@@ -787,7 +761,6 @@
       "price": 24900000,
       "salePrice": 18900000,
       "images": [
-        "/images/ngoc-minh/sf16-1.webp",
         "/images/ngoc-minh/sf16-1.webp"
       ],
       "details": [
@@ -809,7 +782,6 @@
       "price": 19900000,
       "salePrice": 14900000,
       "images": [
-        "/images/ngoc-minh/sf17-1.webp",
         "/images/ngoc-minh/sf17-1.webp"
       ],
       "details": [
@@ -831,7 +803,6 @@
       "price": 600000000,
       "salePrice": 490000000,
       "images": [
-        "/images/ngoc-minh/sf18-1.webp",
         "/images/ngoc-minh/sf18-1.webp"
       ],
       "details": [

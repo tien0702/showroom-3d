@@ -5,9 +5,10 @@ import { catalog, priceOf, variantOf } from '@/features/catalog/api';
 import { ProductCard } from '@/features/catalog/ProductCard';
 import { showroomApi, showroomFor } from '@/features/showroom/api';
 import { useCart } from '@/features/cart/store';
-import { Button, Icons, ImageFrame, Price, QtyStepper, Segmented, Swatches, Tooltip } from '@/shared/ui';
+import { Button, Icons, ImageFrame, Price, QtyStepper, Segmented, Swatches } from '@/shared/ui';
 import { formatDims } from '@/shared/lib/format';
 import { useDocumentTitle } from '@/shared/hooks/useDocumentTitle';
+import { brand } from '@/app/config';
 import s from './pages.module.css';
 
 const Viewer = lazy(() => import('@/features/catalog/ProductViewer3D').then((m) => ({ default: m.ProductViewer3D })));
@@ -137,15 +138,9 @@ export default function ProductPage() {
             <Button variant="accent" size="lg" icon={<Icons.IconCube />} onClick={() => navigate(roomLink(room.id))}>
               Xem trong phòng 3D
             </Button>
-            <Tooltip label="Cần mô hình USDZ/GLB thật – đang cập nhật">
-              {({ ref, ...aria }) => (
-                <span ref={ref} {...aria} tabIndex={0} className={s.ctaWrap}>
-                  <Button size="lg" icon={<Icons.IconPhone />} disabled block tabIndex={-1}>
-                    Xem bằng AR
-                  </Button>
-                </span>
-              )}
-            </Tooltip>
+            <a className={s.callBtn} href={`tel:${brand.hotlineTel}`}>
+              <Icons.IconPhone size={18} /> Gọi {brand.hotline}
+            </a>
           </div>
 
           <div className={s.buyRow}>
@@ -196,9 +191,9 @@ export default function ProductPage() {
           </ul>
 
           <div className={s.trust}>
-            <span><Icons.IconTruck size={18} /> Giao 3–5 ngày</span>
-            <span><Icons.IconShield size={18} /> Bảo hành 2 năm</span>
-            <span><Icons.IconReturn size={18} /> Đổi trả 30 ngày</span>
+            <span><Icons.IconCheck size={18} /> Sản xuất tại xưởng</span>
+            <span><Icons.IconShield size={18} /> Bảo hành 1–3 năm</span>
+            <span><Icons.IconReset size={18} /> Bảo trì vĩnh viễn</span>
           </div>
         </motion.div>
       </div>

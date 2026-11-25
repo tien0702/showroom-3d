@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { catalog, priceOf, variantOf } from '@/features/catalog/api';
+import { brand } from '@/app/config';
 import { Button, Drawer, IconButton, Icons, ImageFrame, Price, QtyStepper } from '@/shared/ui';
 import { cartCount, cartTotal, useCart } from './store';
 import s from './cart.module.css';
@@ -22,9 +23,12 @@ export function CartDrawer() {
               <span>Tạm tính</span>
               <Price value={cartTotal(lines)} animated className={s.total} />
             </div>
-            <Button variant="primary" size="lg" block onClick={close}>
-              Tiến hành đặt hàng
+            <Button variant="primary" size="lg" block icon={<Icons.IconPhone size={18} />} onClick={() => (window.location.href = `tel:${brand.hotlineTel}`)}>
+              Gọi đặt hàng {brand.hotline}
             </Button>
+            <a className={s.fbLink} href={brand.facebook} target="_blank" rel="noreferrer">
+              Hoặc nhắn tin qua Facebook
+            </a>
           </div>
         )
       }

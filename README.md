@@ -41,10 +41,10 @@ src/
 │     ├─ hooks/          Phím tắt
 │     └─ components/     Plan2D (SVG), scene/ (3D), toolbar, inspector…
 ├─ shared/               UI dùng chung (Button, IconButton+Tooltip, ImageFrame…), hooks, lib
-├─ data/                 Dữ liệu mẫu JSON (catalog.json, showrooms.json)
+├─ data/                 Dữ liệu JSON (collection.json: sản phẩm Ngọc Minh, showrooms.json: phòng mẫu)
 ├─ types/                Kiểu dữ liệu domain – nguồn chuẩn cho format dữ liệu
 ├─ styles/               tokens.css, global.css
-└─ dev/                  Trang chỉ chạy ở môi trường dev (render ảnh sản phẩm)
+└─ dev/                  Trang chỉ chạy ở môi trường dev (render ảnh phòng mẫu)
 ```
 
 Quy tắc: `pages` ghép các `features`; `features` không import lẫn trang; `shared` không biết gì về nghiệp vụ.
@@ -66,15 +66,15 @@ Khi có backend, chỉ cần thay phần thân của `features/catalog/api.ts` v
 
 ## Ảnh sản phẩm
 
-Ảnh trong `public/images` được render trực tiếp từ model 3D:
+Ảnh bìa phòng mẫu trong `public/images/showrooms` được render trực tiếp từ model 3D:
 
 ```bash
 npm run dev                                   # cửa sổ 1
 CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm run thumbnails   # cửa sổ 2
-npm run thumbnails -- SOFA                    # chỉ render SKU chứa "SOFA"
+npm run thumbnails -- studio                  # chỉ render phòng có id chứa "studio"
 ```
 
-Khi có ảnh chụp thật, thay file cùng tên hoặc sửa `assets.thumb` / `assets.gallery` trong `catalog.json`.
+Ảnh sản phẩm là ảnh chụp thật trong `public/images/ngoc-minh/`, khai báo ở `images` trong `src/data/collection.json`.
 
 ## Thêm model GLB thật
 

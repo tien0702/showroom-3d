@@ -261,7 +261,7 @@ export const usePlanner = create<PlannerState>()(
       };
     },
     {
-      name: 'hearth.designs.v1',
+      name: 'ngocminh.designs.v1',
       partialize: (s) => ({ saved: s.saved, view: s.view, showDimensions: s.showDimensions }),
     },
   ),

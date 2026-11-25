@@ -296,6 +296,23 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--sp-2);
 }
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 54px;
+  padding: 0 var(--sp-4);
+  border-radius: 14px;
+  font-weight: 600;
+  background: var(--c-surface);
+  box-shadow: inset 0 0 0 1px var(--c-line-strong);
+  white-space: nowrap;
+  transition: background var(--dur-fast);
+}
+.callBtn:hover {
+  background: var(--c-surface-2);
+}
 .ctaWrap {
   display: block;
   border-radius: 14px;

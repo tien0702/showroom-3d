@@ -94,3 +94,15 @@
   color: var(--c-accent);
   font-weight: 600;
 }
+
+.fbLink {
+  display: block;
+  text-align: center;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-accent);
+}
+.fbLink:hover {
+  text-decoration: underline;
+}

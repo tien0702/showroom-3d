@@ -99,92 +99,26 @@
       },
       "items": [
         {
-          "uid": "i001",
-          "sku": "RUG-NORDIC-240",
-          "variant": "oat",
-          "position": [
-            2.5,
-            2.2
-          ],
-          "elevation": 0,
-          "rotationY": 90
-        },
-        {
-          "uid": "i002",
-          "sku": "TV-LUMI-180",
-          "variant": "oak",
-          "position": [
-            0.33,
-            2.2
-          ],
-          "elevation": 0,
-          "rotationY": 90
-        },
-        {
-          "uid": "i003",
-          "sku": "NM-SF15",
+          "uid": "nor-01",
+          "sku": "NM-SF14",
           "variant": "grey",
           "position": [
-            4.45,
+            5.52,
             2.2
           ],
           "elevation": 0,
           "rotationY": 270
         },
         {
-          "uid": "i004",
-          "sku": "CT-ROUND-80",
-          "variant": "oak",
+          "uid": "nor-02",
+          "sku": "NM-SF15",
+          "variant": "cream",
           "position": [
-            2.55,
+            0.49,
             2.2
           ],
           "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i005",
-          "sku": "ARM-BO",
-          "variant": "ivory",
-          "position": [
-            2.5,
-            0.95
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i006",
-          "sku": "LAMP-ARC",
-          "variant": "black",
-          "position": [
-            5.3,
-            1.0
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i007",
-          "sku": "PLANT-MONSTERA",
-          "variant": "white",
-          "position": [
-            0.55,
-            0.55
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i008",
-          "sku": "ART-LINE-6090",
-          "variant": "oak",
-          "position": [
-            2.5,
-            4.285
-          ],
-          "elevation": 1.1,
-          "rotationY": 180
+          "rotationY": 90
         }
       ]
     },
@@ -311,18 +245,7 @@
       },
       "items": [
         {
-          "uid": "i009",
-          "sku": "RUG-JUTE-160",
-          "variant": "natural",
-          "position": [
-            2.4,
-            3.0
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i010",
+          "uid": "jap-01",
           "sku": "NM-SF01",
           "variant": "light-grey",
           "position": [
@@ -333,73 +256,7 @@
           "rotationY": 90
         },
         {
-          "uid": "i011",
-          "sku": "CT-STONE-120",
-          "variant": "travertine",
-          "position": [
-            2.4,
-            3.0
-          ],
-          "elevation": 0,
-          "rotationY": 90
-        },
-        {
-          "uid": "i012",
-          "sku": "SHELF-GRID-5",
-          "variant": "oak",
-          "position": [
-            1.3,
-            0.305
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i013",
-          "sku": "ARM-HOIAN",
-          "variant": "natural",
-          "position": [
-            3.7,
-            3.0
-          ],
-          "elevation": 0,
-          "rotationY": 270
-        },
-        {
-          "uid": "i014",
-          "sku": "PLANT-MONSTERA",
-          "variant": "terracotta",
-          "position": [
-            4.7,
-            0.55
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i015",
-          "sku": "LAMP-ARC",
-          "variant": "brass",
-          "position": [
-            0.5,
-            5.45
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i016",
-          "sku": "ART-LINE-6090",
-          "variant": "walnut",
-          "position": [
-            0.115,
-            3.0
-          ],
-          "elevation": 1.1,
-          "rotationY": 90
-        },
-        {
-          "uid": "i017",
+          "uid": "jap-02",
           "sku": "NM-BA02",
           "variant": "grey",
           "position": [
@@ -501,18 +358,7 @@
       },
       "items": [
         {
-          "uid": "i022",
-          "sku": "RUG-NORDIC-240",
-          "variant": "slate",
-          "position": [
-            2.0,
-            1.9
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i023",
+          "uid": "min-01",
           "sku": "NM-GN01",
           "variant": "cream",
           "position": [
@@ -523,70 +369,15 @@
           "rotationY": 0
         },
         {
-          "uid": "i024",
-          "sku": "NS-KAI",
-          "variant": "oak",
-          "position": [
-            0.85,
-            0.33
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i025",
-          "sku": "NS-KAI",
-          "variant": "oak",
-          "position": [
-            3.15,
-            0.33
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i026",
-          "sku": "LAMP-DOME",
-          "variant": "linen",
-          "position": [
-            0.85,
-            0.33
-          ],
-          "elevation": 0.5,
-          "rotationY": 0
-        },
-        {
-          "uid": "i027",
-          "sku": "LAMP-DOME",
-          "variant": "linen",
-          "position": [
-            3.15,
-            0.33
-          ],
-          "elevation": 0.5,
-          "rotationY": 0
-        },
-        {
-          "uid": "i028",
-          "sku": "WARD-SORA-100",
+          "uid": "min-02",
+          "sku": "NM-TD02",
           "variant": "white",
           "position": [
-            0.43,
-            2.4
+            0.26,
+            2.6
           ],
           "elevation": 0,
           "rotationY": 90
-        },
-        {
-          "uid": "i029",
-          "sku": "ART-LINE-6090",
-          "variant": "oak",
-          "position": [
-            2.0,
-            0.115
-          ],
-          "elevation": 1.25,
-          "rotationY": 0
         }
       ]
     },
@@ -689,7 +480,7 @@
       },
       "items": [
         {
-          "uid": "i030",
+          "uid": "stu-01",
           "sku": "NM-GN12",
           "variant": "grey",
           "position": [
@@ -700,40 +491,7 @@
           "rotationY": 0
         },
         {
-          "uid": "i031",
-          "sku": "NS-KAI",
-          "variant": "walnut",
-          "position": [
-            3.6,
-            0.33
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i032",
-          "sku": "LAMP-DOME",
-          "variant": "sage",
-          "position": [
-            3.6,
-            0.33
-          ],
-          "elevation": 0.5,
-          "rotationY": 0
-        },
-        {
-          "uid": "i033",
-          "sku": "RUG-NORDIC-240",
-          "variant": "oat",
-          "position": [
-            1.9,
-            3.4
-          ],
-          "elevation": 0,
-          "rotationY": 90
-        },
-        {
-          "uid": "i034",
+          "uid": "stu-02",
           "sku": "NM-SF15",
           "variant": "black",
           "position": [
@@ -744,81 +502,15 @@
           "rotationY": 90
         },
         {
-          "uid": "i035",
-          "sku": "CT-ROUND-80",
-          "variant": "walnut",
-          "position": [
-            1.9,
-            3.4
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i036",
-          "sku": "DT-MOC-160",
-          "variant": "walnut",
+          "uid": "stu-03",
+          "sku": "NM-BA03",
+          "variant": "cream",
           "position": [
             2.2,
-            0.58
+            1.0
           ],
           "elevation": 0,
           "rotationY": 0
-        },
-        {
-          "uid": "i037",
-          "sku": "DC-ECHO",
-          "variant": "walnut",
-          "position": [
-            1.8,
-            1.32
-          ],
-          "elevation": 0,
-          "rotationY": 180
-        },
-        {
-          "uid": "i038",
-          "sku": "DC-ECHO",
-          "variant": "walnut",
-          "position": [
-            2.6,
-            1.32
-          ],
-          "elevation": 0,
-          "rotationY": 180
-        },
-        {
-          "uid": "i039",
-          "sku": "LAMP-ARC",
-          "variant": "black",
-          "position": [
-            1.4,
-            4.55
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i040",
-          "sku": "PLANT-MONSTERA",
-          "variant": "white",
-          "position": [
-            5.45,
-            2.6
-          ],
-          "elevation": 0,
-          "rotationY": 0
-        },
-        {
-          "uid": "i041",
-          "sku": "TV-LUMI-180",
-          "variant": "walnut",
-          "position": [
-            5.0,
-            4.67
-          ],
-          "elevation": 0,
-          "rotationY": 180
         }
       ]
     }
