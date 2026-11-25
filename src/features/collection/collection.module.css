@@ -1,0 +1,222 @@
+.sale {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: var(--r-pill);
+  background: var(--c-danger);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  margin-top: var(--sp-1);
+}
+.was {
+  color: var(--c-ink-3);
+  font-size: var(--fs-sm);
+  text-decoration: line-through;
+}
+.intro {
+  max-width: 64ch;
+  color: var(--c-ink-2);
+  margin-top: calc(var(--sp-3) * -1);
+  padding-bottom: var(--sp-5);
+}
+.specs {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 10px var(--sp-5);
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+.specs dt {
+  color: var(--c-ink-3);
+}
+.specs dd {
+  margin: 0;
+  font-weight: 600;
+}
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-top: calc(var(--sp-2) * -1);
+}
+.priceBlock .was {
+  font-size: var(--fs-md);
+}
+.ctaRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 54px;
+  padding: 0 var(--sp-4);
+  border-radius: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: background var(--dur-fast), box-shadow var(--dur-fast);
+}
+.ctaPrimary {
+  background: var(--c-ink);
+  color: #fff;
+}
+.ctaPrimary:hover {
+  background: #2c2e31;
+  box-shadow: var(--shadow-2);
+}
+.ctaSecondary {
+  background: var(--c-surface);
+  box-shadow: inset 0 0 0 1px var(--c-line-strong);
+}
+.ctaSecondary:hover {
+  background: var(--c-surface-2);
+}
+.notes {
+  border-top: 1px solid var(--c-line);
+  padding-top: var(--sp-4);
+  font-size: var(--fs-sm);
+  color: var(--c-ink-2);
+  line-height: 1.6;
+}
+.notes h2 {
+  font-size: var(--fs-md);
+  color: var(--c-ink);
+  margin-bottom: var(--sp-2);
+}
+.notes ul {
+  margin: 0 0 var(--sp-4);
+  padding-left: 1.2em;
+}
+
+/* ---------- About ---------- */
+.banner {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  margin-top: var(--sp-6);
+}
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.aboutGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: var(--sp-10);
+  padding-top: var(--sp-10);
+  align-items: start;
+}
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  color: var(--c-ink-2);
+  line-height: 1.7;
+  font-size: var(--fs-md);
+}
+.prose h1 {
+  font-size: var(--fs-2xl);
+  color: var(--c-ink);
+  line-height: 1.2;
+}
+.prose h2 {
+  font-size: var(--fs-lg);
+  color: var(--c-ink);
+  margin-top: var(--sp-4);
+}
+.prose ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.contactCard {
+  background: var(--c-ink);
+  color: #e9e6df;
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+}
+.contactCard img {
+  width: 140px;
+  height: auto;
+}
+.contactCard strong {
+  color: #fff;
+  font-size: var(--fs-lg);
+  line-height: 1.35;
+}
+.contactCard dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+.contactCard dt {
+  color: #a9a59c;
+}
+.contactCard dd {
+  margin: 2px 0 0;
+  overflow-wrap: anywhere;
+}
+.contactCard a:hover {
+  text-decoration: underline;
+}
+.contactCard .ctaLink {
+  background: #f9d342;
+  color: #17181a;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-3);
+  margin: var(--sp-2) 0;
+}
+.stats div {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stats b {
+  font-size: var(--fs-xl);
+  color: var(--c-ink);
+}
+.stats span {
+  font-size: var(--fs-sm);
+}
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contactCard {
+    position: static;
+  }
+}
+@media (max-width: 640px) {
+  .ctaRow,
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,945 @@
+{
+  "categories": [
+    {
+      "id": "sofa",
+      "label": "Sofa phòng khách"
+    },
+    {
+      "id": "bed",
+      "label": "Giường ngủ"
+    },
+    {
+      "id": "dining",
+      "label": "Bàn ăn"
+    },
+    {
+      "id": "vanity",
+      "label": "Bàn trang điểm"
+    }
+  ],
+  "products": [
+    {
+      "code": "BA01",
+      "slug": "ba01",
+      "name": "Bàn Ăn Phòng Bếp",
+      "category": "dining",
+      "size": "bàn 1.6m x 6 ghế",
+      "material": "Mặt Ceramic cao cấp",
+      "price": 10000000,
+      "salePrice": 7800000,
+      "images": [
+        "/images/ngoc-minh/ba01-1.webp",
+        "/images/ngoc-minh/ba01-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.6m x 6 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA02",
+      "slug": "ba02",
+      "name": "Bàn Ăn Phòng Bếp 6 Ghế",
+      "category": "dining",
+      "size": "bàn 1.6m x 6 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 10000000,
+      "salePrice": 7800000,
+      "images": [
+        "/images/ngoc-minh/ba02-1.webp",
+        "/images/ngoc-minh/ba02-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.6m x 6 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA03",
+      "slug": "ba03",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "bàn 1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba03-1.webp",
+        "/images/ngoc-minh/ba03-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA04",
+      "slug": "ba04",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "bàn 1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba04-1.webp",
+        "/images/ngoc-minh/ba01-1.webp",
+        "/images/ngoc-minh/ba04-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA05",
+      "slug": "ba05",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba05-1.webp",
+        "/images/ngoc-minh/ba05-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA06",
+      "slug": "ba06",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba06-1.webp",
+        "/images/ngoc-minh/ba06-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.6m x 6 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA07",
+      "slug": "ba07",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba07-1.webp",
+        "/images/ngoc-minh/ba07-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA08",
+      "slug": "ba08",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba08-1.webp",
+        "/images/ngoc-minh/ba08-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA09",
+      "slug": "ba09",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba09-1.webp",
+        "/images/ngoc-minh/ba09-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA10",
+      "slug": "ba10",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba10-1.webp",
+        "/images/ngoc-minh/ba10-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "BA11",
+      "slug": "ba11",
+      "name": "Bàn Ăn Phòng Bếp 4 Ghế",
+      "category": "dining",
+      "size": "1.2m x 4 ghế",
+      "material": "Mặt đá Ceramic",
+      "price": 6000000,
+      "salePrice": 3800000,
+      "images": [
+        "/images/ngoc-minh/ba11-1.webp",
+        "/images/ngoc-minh/ba11-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Bàn Ăn Phòng Bếp (1.2m x 4 ghế)",
+        "Chất liệu mặt bàn: Ceramic cao cấp",
+        "Loại da bọc ghế: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chân ghế được sơn tĩnh điện chống rỉ sét",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "GN01",
+      "slug": "gn01",
+      "name": "Giường Ngủ Bọc Da Cao Cấp Nhập Khẩu",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": 17000000,
+      "salePrice": 14900000,
+      "images": [
+        "/images/ngoc-minh/gn01-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN02",
+      "slug": "gn02",
+      "name": "Giường Ngủ Bọc Da Cao Cấp Nhập Khẩu",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": 15500000,
+      "salePrice": 11500000,
+      "images": [
+        "/images/ngoc-minh/gn02-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN03",
+      "slug": "gn03",
+      "name": "Giường Ngủ Bọc Da Cao Cấp Nhập Khẩu",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": 15500000,
+      "salePrice": 11500000,
+      "images": [
+        "/images/ngoc-minh/gn03-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN04",
+      "slug": "gn04",
+      "name": "Giường Ngủ Bọc Vải Cao Cấp Nhập Khẩu",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Vải",
+      "price": null,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn04-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN05",
+      "slug": "gn05",
+      "name": "Giường Ngủ Bọc Vải Cao Cấp Nhập Khẩu",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": null,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn05-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN06",
+      "slug": "gn06",
+      "name": "Giường Ngủ Bọc Da Nhập Khẩu Cao Cấp",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": 29900000,
+      "salePrice": 25900000,
+      "images": [
+        "/images/ngoc-minh/gn06-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN07",
+      "slug": "gn07",
+      "name": "Giường Ngủ Tân Cổ Điển",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Vải",
+      "price": 5900000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn07-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN08",
+      "slug": "gn08",
+      "name": "Giường Ngủ Tân Cổ Điển",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Vải",
+      "price": 36000000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn08-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN09",
+      "slug": "gn09",
+      "name": "Giường Ngủ Tân Cổ Điển",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Vải",
+      "price": 5900000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn09-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN10",
+      "slug": "gn10",
+      "name": "Giường Ngủ Hiện Đại",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": null,
+      "price": 25000000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn10-1.webp",
+        "/images/ngoc-minh/gn10-1.webp",
+        "/images/ngoc-minh/gn10-3.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Giường Ngủ Hiện Đại Nhập Khẩu (1.8m x 2m)",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "GN11",
+      "slug": "gn11",
+      "name": "Giường Ngủ Hiện Đại",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Vải",
+      "price": null,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/gn11-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "GN12",
+      "slug": "gn12",
+      "name": "Giường Ngủ Hiện Đại",
+      "category": "bed",
+      "size": "1.8m x 2m",
+      "material": "Da công nghiệp",
+      "price": 12500000,
+      "salePrice": 9000000,
+      "images": [
+        "/images/ngoc-minh/gn12-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "SF01",
+      "slug": "sf01",
+      "name": "Sofa Phòng Khách Góc L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Vải",
+      "price": 14900000,
+      "salePrice": 9900000,
+      "images": [
+        "/images/ngoc-minh/sf01-1.webp",
+        "/images/ngoc-minh/sf01-1.webp",
+        "/images/ngoc-minh/sf01-3.webp",
+        "/images/ngoc-minh/sf01-4.webp",
+        "/images/ngoc-minh/sf01-5.webp",
+        "/images/ngoc-minh/sf01-6.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.1m)",
+        "Loại vải bọc: vải nỉ (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF02",
+      "slug": "sf02",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Vải bố 3 lớp",
+      "price": 14900000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/sf02-1.webp",
+        "/images/ngoc-minh/sf02-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại vải bọc: vải bố 3 lớp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF03",
+      "slug": "sf03",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "3.2m x 1.7m",
+      "material": "Vải bố 3 lớp",
+      "price": 14900000,
+      "salePrice": null,
+      "images": [
+        "/images/ngoc-minh/sf03-1.webp",
+        "/images/ngoc-minh/sf03-1.webp",
+        "/images/ngoc-minh/sf03-3.webp",
+        "/images/ngoc-minh/sf03-4.webp",
+        "/images/ngoc-minh/sf03-5.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (3.2m x 1.7m)",
+        "Loại vải bọc: vải bố 3 lớp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF04",
+      "slug": "sf04",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 18900000,
+      "salePrice": 13900000,
+      "images": [
+        "/images/ngoc-minh/sf04-1.webp",
+        "/images/ngoc-minh/sf04-2.webp",
+        "/images/ngoc-minh/sf04-3.webp",
+        "/images/ngoc-minh/sf04-4.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF05",
+      "slug": "sf05",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 19900000,
+      "salePrice": 12900000,
+      "images": [
+        "/images/ngoc-minh/sf05-1.webp",
+        "/images/ngoc-minh/sf05-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF06",
+      "slug": "sf06",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 21000000,
+      "salePrice": 16900000,
+      "images": [
+        "/images/ngoc-minh/sf06-1.webp",
+        "/images/ngoc-minh/sf06-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF07",
+      "slug": "sf07",
+      "name": "Sofa Phòng Khách Góc Chữ L",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Vải bố 3 lớp",
+      "price": 17900000,
+      "salePrice": 13900000,
+      "images": [
+        "/images/ngoc-minh/sf07-1.webp",
+        "/images/ngoc-minh/sf07-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại vải bọc: Vải bố 3 lớp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF08",
+      "slug": "sf08",
+      "name": "Sofa Phòng Khách Cao Cấp",
+      "category": "sofa",
+      "size": "3.2m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 18900000,
+      "salePrice": 12900000,
+      "images": [
+        "/images/ngoc-minh/sf08-1.webp",
+        "/images/ngoc-minh/sf08-2.webp",
+        "/images/ngoc-minh/sf08-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L cao cấp (3.2m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF09",
+      "slug": "sf09",
+      "name": "Sofa Phòng Khách Hiện Đại",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 21900000,
+      "salePrice": 17900000,
+      "images": [
+        "/images/ngoc-minh/sf09-1.webp",
+        "/images/ngoc-minh/sf09-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH",
+        "=> Lưu ý: Giá chưa bao gồm ghế đơn"
+      ]
+    },
+    {
+      "code": "SF10",
+      "slug": "sf10",
+      "name": "Sofa Phòng Khách Hiện Đại",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Vải",
+      "price": 25000000,
+      "salePrice": 19900000,
+      "images": [
+        "/images/ngoc-minh/sf10-1.webp",
+        "/images/ngoc-minh/sf10-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại vải bọc: Vải bố 3 lớp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH",
+        "=> Lưu ý: Giá chưa bao gồm ghế đơn"
+      ]
+    },
+    {
+      "code": "SF11",
+      "slug": "sf11",
+      "name": "Sofa Phòng Khách Hiện Đại",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 18900000,
+      "salePrice": 14900000,
+      "images": [
+        "/images/ngoc-minh/sf11-1.webp",
+        "/images/ngoc-minh/sf11-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF12",
+      "slug": "sf12",
+      "name": "Sofa Phòng Khách Sang Trọng",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 19900000,
+      "salePrice": 15900000,
+      "images": [
+        "/images/ngoc-minh/sf12-1.webp",
+        "/images/ngoc-minh/sf12-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF13",
+      "slug": "sf13",
+      "name": "Sofa Phòng Khách Hiện Đại",
+      "category": "sofa",
+      "size": "3.2m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 19900000,
+      "salePrice": 15900000,
+      "images": [
+        "/images/ngoc-minh/sf13-1.webp",
+        "/images/ngoc-minh/sf13-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hình chữ L (2.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF14",
+      "slug": "sf14",
+      "name": "Sofa Phòng Khách Góc Lớn",
+      "category": "sofa",
+      "size": "3.8m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 25000000,
+      "salePrice": 21900000,
+      "images": [
+        "/images/ngoc-minh/sf14-1.webp",
+        "/images/ngoc-minh/sf14-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa Góc Lớn (3.8m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF15",
+      "slug": "sf15",
+      "name": "Sofa Băng Phòng Khách",
+      "category": "sofa",
+      "size": "1.8m",
+      "material": "Da công nghiệp",
+      "price": 13500000,
+      "salePrice": 9500000,
+      "images": [
+        "/images/ngoc-minh/sf15-1.webp",
+        "/images/ngoc-minh/sf15-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa Băng (1.8m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF16",
+      "slug": "sf16",
+      "name": "Sofa Phòng Khách Hiện Đại",
+      "category": "sofa",
+      "size": "2.8m x 1.7m",
+      "material": "Vải bố 3 lớp",
+      "price": 24900000,
+      "salePrice": 18900000,
+      "images": [
+        "/images/ngoc-minh/sf16-1.webp",
+        "/images/ngoc-minh/sf16-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa hiện đại (2.8m x 1.7m)",
+        "Loại vải bọc: Vải bố 3 lớp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF17",
+      "slug": "sf17",
+      "name": "Sofa Phòng Khách Góc Lớn",
+      "category": "sofa",
+      "size": "3.2m x 1.7m",
+      "material": "Da công nghiệp",
+      "price": 19900000,
+      "salePrice": 14900000,
+      "images": [
+        "/images/ngoc-minh/sf17-1.webp",
+        "/images/ngoc-minh/sf17-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa Góc Lớn (3.2m x 1.7m)",
+        "Loại da bọc: Da công nghiệp (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "SF18",
+      "slug": "sf18",
+      "name": "Sofa Cổ Điển Da Bò Cao Cấp",
+      "category": "sofa",
+      "size": null,
+      "material": "Da bò",
+      "price": 600000000,
+      "salePrice": 490000000,
+      "images": [
+        "/images/ngoc-minh/sf18-1.webp",
+        "/images/ngoc-minh/sf18-1.webp"
+      ],
+      "details": [
+        "Kiểu dáng: Kiểu Sofa Cổ Điển",
+        "Loại da bọc: Da bò (nhập khẩu Hàn Quốc)",
+        "Chất liệu nệm ngồi: Nệm musse cao cấp D40",
+        "Khung gỗ dầu: dầu sấy đạt độ ẩm 12%, xử lý mối mọt PD3.",
+        "Màu sắc tùy chọn",
+        "Sản phẩm được thiết kế và sản xuất trực tiếp tại nhà sản xuất của NGỌC MINH"
+      ]
+    },
+    {
+      "code": "TD01",
+      "slug": "td01",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td01-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD02",
+      "slug": "td02",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": "Mặt đá Ceramic",
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td02-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD03",
+      "slug": "td03",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td03-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD04",
+      "slug": "td04",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td04-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD05",
+      "slug": "td05",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td05-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD06",
+      "slug": "td06",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td06-1.webp"
+      ],
+      "details": []
+    },
+    {
+      "code": "TD08",
+      "slug": "td08",
+      "name": "Bàn Trang Điểm Hiện Đại",
+      "category": "vanity",
+      "size": "1m",
+      "material": null,
+      "price": 5000000,
+      "salePrice": 3500000,
+      "images": [
+        "/images/ngoc-minh/td08-1.webp"
+      ],
+      "details": []
+    }
+  ]
+}

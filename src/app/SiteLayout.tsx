@@ -7,7 +7,9 @@ import s from './layout.module.css';
 
 const NAV = [
   { to: '/', label: 'Showroom 3D', end: true },
-  { to: '/products', label: 'Sản phẩm', end: false },
+  { to: '/products', label: 'Sản phẩm 3D', end: false },
+  { to: '/mau-ngoc-minh', label: 'Mẫu Ngọc Minh', end: false },
+  { to: '/gioi-thieu', label: 'Giới thiệu', end: false },
 ];
 
 /** Keeps the outgoing page's content during the exit animation. */
@@ -24,7 +26,9 @@ export function SiteLayout() {
       <header className={s.header}>
         <div className={`container ${s.headerInner}`}>
           <Link to="/" className={s.logo} aria-label={`${brand.name} – Trang chủ`}>
-            <span className={s.logoMark}>{brand.short}</span>
+            <span className={s.logoMark}>
+              <img src={brand.mark} alt="" />
+            </span>
             <span className={`${s.logoText} truncate`}>{brand.name}</span>
           </Link>
           <nav className={s.nav} aria-label="Chính">
@@ -57,9 +61,29 @@ export function SiteLayout() {
         </motion.main>
       </AnimatePresence>
       <footer className={s.footer}>
+        <div className={`container ${s.footerGrid}`}>
+          <div className={s.footerBrand}>
+            <img src={brand.logo} alt={brand.name} className={s.footerLogo} />
+          </div>
+          <div className={s.footerCol}>
+            <strong>{brand.legalName}</strong>
+            <span>{brand.address}</span>
+            <a href={`tel:${brand.hotlineTel}`}>Hotline: {brand.hotline}</a>
+            <a href={`mailto:${brand.email}`}>Email: {brand.email}</a>
+          </div>
+          <nav className={s.footerCol} aria-label="Liên kết">
+            <strong>Khám phá</strong>
+            {NAV.map((n) => (
+              <Link key={n.to} to={n.to}>
+                {n.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
         <div className={`container ${s.footerInner}`}>
-          <span className="truncate">© {new Date().getFullYear()} {brand.name}</span>
-          <span className="nowrap">Hotline {brand.hotline}</span>
+          <span className="truncate">
+            © {new Date().getFullYear()} {brand.legalName}
+          </span>
         </div>
       </footer>
     </div>

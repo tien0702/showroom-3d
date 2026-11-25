@@ -105,6 +105,11 @@
   font-weight: 700;
   margin-inline: var(--sp-1);
 }
+.brandMark img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
 .title {
   font-size: var(--fs-md);
   font-weight: 600;

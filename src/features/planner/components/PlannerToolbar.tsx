@@ -39,7 +39,7 @@ export function PlannerToolbar({ title }: { title: string }) {
       <div className={s.toolbarStart}>
         <IconButton label="Về danh sách showroom" icon={<Icons.IconArrowLeft />} onClick={() => history.back()} tooltipSide="bottom" />
         <Link to="/" className={s.brandMark} aria-label={brand.name}>
-          {brand.short}
+          <img src={brand.mark} alt="" />
         </Link>
         <h1 className={`${s.title} truncate`} title={title}>{title}</h1>
         <div className={s.toolGroup}>
