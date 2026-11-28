@@ -32,13 +32,36 @@ Danh sách sản phẩm Ngọc Minh (lấy từ website cũ). Đây là nguồn 
       "price": 14900000,              // giá gốc, null = liên hệ
       "salePrice": 9900000,           // giá khuyến mãi, null nếu không có
       "images": ["/images/ngoc-minh/sf01-1.webp"],
-      "details": ["Khung gỗ dầu sấy…"]
+      "details": ["Khung gỗ dầu sấy…"],
+      "model3d": "/models/sf01.glb",          // tuỳ chọn: model GLB nhập từ admin
+      "dimensions": { "w": 2.8, "d": 1.7, "h": 0.85 } // tuỳ chọn: kích thước thật (mét)
     }
   ]
 }
 ```
 
 Sản phẩm 3D được sinh tự động từ file này trong `src/features/collection/toProducts.ts` (chọn model, kích thước, màu tuỳ chọn, luật đặt đồ). Sản phẩm không có giá sẽ không xuất hiện trong showroom 3D.
+
+## `banners.json`
+
+Ảnh quảng cáo trang chủ (xếp chồng kiểu lá bài, tự đổi).
+
+```jsonc
+{
+  "intervalMs": 4500,                       // thời gian giữa hai ảnh
+  "banners": [
+    { "id": "b1", "image": "/images/banners/b1.webp", "title": "…", "subtitle": "…", "link": "/mau-ngoc-minh" }
+  ]
+}
+```
+
+## `featured.json`
+
+Sản phẩm đề xuất ở trang chủ, theo thứ tự. `slugs` là `slug` trong `collection.json`; danh sách rỗng thì lấy 4 sản phẩm đầu.
+
+```json
+{ "title": "Sản phẩm xem được 3D", "slugs": ["sf01", "sf02"] }
+```
 
 ## `showrooms.json`
 

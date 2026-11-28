@@ -12,6 +12,8 @@ const BASE = process.env.BASE_URL ?? 'http://localhost:5173';
 const CHROME = process.env.CHROME_PATH ?? '/usr/bin/google-chrome';
 const showrooms = JSON.parse(await readFile(new URL('../src/data/showrooms.json', import.meta.url)));
 const only = process.argv[2];
+// An exact id renders just that room; otherwise any id containing the text.
+const exact = only && showrooms.showrooms.some((s) => s.id === only);
 
 await mkdir(new URL('../public/images/showrooms/', import.meta.url), { recursive: true });
 
@@ -31,7 +33,7 @@ async function shot(url, out, size, opaque) {
 }
 
 for (const s of showrooms.showrooms) {
-  if (only && !s.id.includes(only)) continue;
+  if (only && (exact ? s.id !== only : !s.id.includes(only))) continue;
   await shot(`/__capture?room=${s.id}`, `showrooms/${s.id}.webp`, { width: 1200, height: 900 }, true);
 }
 await browser.close();

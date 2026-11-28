@@ -13,6 +13,50 @@ npm run lint
 
 Yêu cầu Node 20+.
 
+## Trang quản trị (chỉ chạy trên máy)
+
+Trang `/_admin` dùng để sửa nội dung web mà không cần đụng code. Nó **chỉ chạy khi bật dự án trên máy** và không có trong bản đăng lên GitHub Pages.
+
+### Chạy lần đầu
+
+1. Cài [Node.js 20+](https://nodejs.org) và [Git](https://git-scm.com), đăng nhập GitHub trên máy để `git push` được (ví dụ chạy `gh auth login`, hoặc dùng GitHub Desktop).
+2. Mở Terminal trong thư mục dự án rồi chạy:
+   ```bash
+   npm install      # chỉ cần lần đầu
+   npm run admin    # bật web + tự mở http://localhost:5173/_admin/
+   ```
+3. Để cửa sổ Terminal mở trong lúc làm. Muốn tắt thì bấm `Ctrl + C`.
+
+### Các mục
+
+| Mục | Làm được gì |
+|---|---|
+| Sản phẩm & model 3D | Thêm, sửa, xoá sản phẩm; tải ảnh (tự đổi sang WebP); nhập file `.glb`; nhập kích thước thật |
+| Ảnh quảng cáo | Thêm, thay, xoá, sắp xếp ảnh banner trang chủ; tiêu đề, link, thời gian đổi ảnh |
+| Sản phẩm đề xuất | Chọn và sắp xếp sản phẩm hiện ở trang chủ |
+| Phòng mẫu 3D | Sửa tên, loại phòng; lưu bản thiết kế tự làm thành phòng mẫu; chụp lại ảnh bìa |
+
+### Lưu phòng tự thiết kế thành phòng mẫu
+
+1. Ở mục **Phòng mẫu 3D**, bấm **Mở trình thiết kế** trên một phòng. Một tab mới mở ra.
+2. Trong tab đó, bấm nút 🏠 để chỉnh kích thước phòng, cửa sổ, cửa chính; thêm, kéo, đổi màu đồ.
+3. Quay lại tab admin. Phòng đó sẽ hiện **“Có bản thiết kế mới trên máy”**:
+   - **Ghi đè phòng mẫu này**: thay phòng mẫu bằng bản vừa làm.
+   - **Lưu thành phòng mới…**: tạo thêm một phòng mẫu.
+
+   Ảnh bìa được chụp tự động từ mô hình 3D (cần có Google Chrome trên máy).
+
+### Đăng lên web
+
+Mỗi lần **Lưu**, dữ liệu được ghi vào file trong dự án (`src/data/*.json`, `public/images`, `public/models`). Thanh vàng phía trên cho biết còn bao nhiêu thay đổi chưa đăng. Bấm **Đăng lên web**: admin tự `git commit` và `git push` các file đó, rồi GitHub Pages tự build lại trong khoảng 1–2 phút.
+
+> Nút này chỉ đăng **dữ liệu**. Nếu có sửa code, hãy commit code theo cách thông thường trước.
+
+## Đơn đặt hàng
+
+Khách bấm **Đặt hàng** trong giỏ, nhập tên và số điện thoại. Đơn (kèm danh sách món và tổng tiền) được gửi qua [FormSubmit](https://formsubmit.co) về email trong `src/app/config.ts` (`orderEndpoint`).
+**Lần đầu tiên** có đơn, FormSubmit gửi một email xác nhận tới hộp thư đó; bấm **Activate** là từ đó đơn sẽ về Gmail.
+
 ## Công nghệ
 
 | Lớp | Thư viện |
@@ -41,7 +85,7 @@ src/
 │     ├─ hooks/          Phím tắt
 │     └─ components/     Plan2D (SVG), scene/ (3D), toolbar, inspector…
 ├─ shared/               UI dùng chung (Button, IconButton+Tooltip, ImageFrame…), hooks, lib
-├─ data/                 Dữ liệu JSON (collection.json: sản phẩm Ngọc Minh, showrooms.json: phòng mẫu)
+├─ data/                 Dữ liệu JSON: collection (sản phẩm), showrooms (phòng mẫu), banners (ảnh quảng cáo), featured (đề xuất)
 ├─ types/                Kiểu dữ liệu domain – nguồn chuẩn cho format dữ liệu
 ├─ styles/               tokens.css, global.css
 └─ dev/                  Trang chỉ chạy ở môi trường dev (render ảnh phòng mẫu)

@@ -1,10 +1,11 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { adminPlugin } from './_admin/server';
 
 export default defineConfig({
   base: process.env.GITHUB_PAGES ? '/showroom-3d/' : '/',
-  plugins: [react()],
+  plugins: [react(), adminPlugin()],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
