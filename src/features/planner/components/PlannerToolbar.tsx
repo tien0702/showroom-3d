@@ -11,7 +11,8 @@ export function PlannerToolbar({ title }: { title: string }) {
   const canUndo = usePlanner((st) => st.past.length > 0);
   const canRedo = usePlanner((st) => st.future.length > 0);
   const showDims = usePlanner((st) => st.showDimensions);
-  const { setView, undo, redo, toggleDimensions, reset, showToast } = usePlanner.getState();
+  const editing = usePlanner((st) => st.roomEditor);
+  const { setView, undo, redo, toggleDimensions, reset, showToast, setRoomEditor } = usePlanner.getState();
   const narrow = useMediaQuery('(max-width: 900px)');
 
   const options: { value: PlannerView; label: string }[] = narrow
@@ -49,6 +50,7 @@ export function PlannerToolbar({ title }: { title: string }) {
       </div>
       <Segmented label="Chế độ xem" value={narrow && view === 'split' ? '3d' : view} options={options} onChange={setView} className={s.viewSwitch} />
       <div className={s.toolbarEnd}>
+        <IconButton label="Chỉnh kích thước phòng, cửa" icon={<Icons.IconRoom size={18} />} active={editing} onClick={() => setRoomEditor(!editing)} tooltipSide="bottom" />
         <IconButton label={showDims ? 'Ẩn kích thước' : 'Hiện kích thước'} icon={<Icons.IconRuler size={18} />} active={showDims} onClick={toggleDimensions} tooltipSide="bottom" />
         <IconButton label="Khôi phục mẫu showroom" icon={<Icons.IconReset size={18} />} onClick={reset} tooltipSide="bottom" className={s.hideSm} />
         <IconButton label="Sao chép liên kết" icon={<Icons.IconShare size={18} />} onClick={share} tooltipSide="bottom" className={s.hideSm} />

@@ -10,6 +10,7 @@ import { CatalogPanel } from '@/features/planner/components/CatalogPanel';
 import { ItemInspector } from '@/features/planner/components/ItemInspector';
 import { CameraBar } from '@/features/planner/components/CameraBar';
 import { SummaryPill } from '@/features/planner/components/SummaryPill';
+import { RoomEditor } from '@/features/planner/components/RoomEditor';
 import { Button, Icons, ToastHost } from '@/shared/ui';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { useDocumentTitle } from '@/shared/hooks/useDocumentTitle';
@@ -28,11 +29,18 @@ export default function DesignerPage() {
   const view = usePlanner((st) => st.view);
   const toast = usePlanner((st) => st.toast);
   const dismissToast = usePlanner((st) => st.dismissToast);
+  const editing = usePlanner((st) => st.roomEditor);
   const narrow = useMediaQuery('(max-width: 900px)');
   const [sheet, setSheet] = useState(false);
   const handled = useRef<string | null>(null);
   usePlannerShortcuts();
   useDocumentTitle(showroom ? `Thiết kế · ${showroom.name}` : 'Thiết kế');
+
+  // Close the room editor when leaving the page.
+  useEffect(() => () => usePlanner.getState().setRoomEditor(false), []);
+  useEffect(() => {
+    if (editing) setSheet(false);
+  }, [editing]);
 
   useEffect(() => {
     if (!showroom) return;
@@ -55,11 +63,11 @@ export default function DesignerPage() {
   const show3d = effective !== '2d';
 
   return (
-    <div className={s.shell}>
+    <div className={s.shell} data-editing={editing || undefined}>
       <PlannerToolbar title={showroom.name} />
       <div className={s.body}>
         <aside className={s.side} aria-label="Danh mục sản phẩm">
-          <CatalogPanel />
+          {editing ? <RoomEditor /> : <CatalogPanel />}
         </aside>
         <main className={s.stage}>
           <section className={`${s.pane} ${s.pane2d}`} style={{ flexGrow: show2d ? 1 : 0.0001, marginRight: show2d ? 0 : -12 }} data-hidden={!show2d} aria-hidden={!show2d}>
@@ -81,6 +89,23 @@ export default function DesignerPage() {
         </main>
       </div>
 
+      <AnimatePresence>
+        {narrow && editing && (
+          <motion.div
+            key="room-sheet"
+            className={`${s.sheet} ${s.sheetRoom}`}
+            role="dialog"
+            aria-label="Chỉnh phòng"
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+          >
+            <span className={s.sheetHandle} />
+            <RoomEditor />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <AnimatePresence>
         {narrow && sheet && (
           <>

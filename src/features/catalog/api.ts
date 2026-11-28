@@ -1,5 +1,6 @@
 import { collection } from '@/features/collection/api';
 import { toProduct } from '@/features/collection/toProducts';
+import featuredData from '@/data/featured.json';
 import type { Category, CategoryId, Product, Variant } from '@/types';
 
 /**
@@ -29,6 +30,11 @@ export const catalog = {
   bySku: (sku: string) => bySku.get(sku),
   bySlug: (slug: string) => bySlug.get(slug),
   map: () => bySku,
+  /** Products picked in the admin for the home page (falls back to the first four). */
+  featured: (): { title: string; products: Product[] } => {
+    const picked = featuredData.slugs.map((slug) => bySlug.get(`nm-${slug}`)).filter((p): p is Product => !!p);
+    return { title: featuredData.title || 'Sản phẩm xem được 3D', products: picked.length ? picked : products.slice(0, 4) };
+  },
   related: (p: Product, limit = 4) => products.filter((x) => x.sku !== p.sku && x.category === p.category).slice(0, limit),
 };
 

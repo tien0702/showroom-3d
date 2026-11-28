@@ -53,3 +53,10 @@ export const IconPanel = make(<><rect x="3" y="4" width="18" height="16" rx="2" 
 export const IconInfo = make(<><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5v.5" /></>);
 export const IconChevronDown = make(<path d="m6 9 6 6 6-6" />);
 export const IconFullscreen = make(<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />);
+export const IconMenu = make(<path d="M4 7h16M4 12h16M4 17h16" />);
+export const IconChevronLeft = make(<path d="m15 6-6 6 6 6" />);
+export const IconChevronRight = make(<path d="m9 6 6 6-6 6" />);
+export const IconMail = make(<><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3.5 6.5 8.5 6.5 8.5-6.5" /></>);
+export const IconDoor = make(<><path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17" /><path d="M3 21h18" /><circle cx="15" cy="12" r="0.9" fill="currentColor" /></>);
+export const IconWindow = make(<><rect x="4" y="3" width="16" height="18" rx="1.5" /><path d="M12 3v18M4 12h16" /></>);
+export const IconRoom = make(<><path d="M3 21V8l9-5 9 5v13" /><path d="M3 21h18" /><path d="M9 21v-7h6v7" /></>);

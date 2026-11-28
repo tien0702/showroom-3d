@@ -1,0 +1,113 @@
+.root {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--sp-3);
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.itemLabel {
+  background: var(--c-surface);
+  color: var(--c-ink);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-2);
+  white-space: nowrap;
+}
+.itemIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  box-shadow: var(--shadow-2);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.item:hover .itemIcon {
+  transform: scale(1.08);
+}
+.zalo {
+  background: #0068ff;
+}
+.phone {
+  background: #1f9d55;
+}
+.fb {
+  background: #1877f2;
+}
+.fab {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--c-danger);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 28px rgba(214, 69, 61, 0.4);
+}
+.fabIcon {
+  display: grid;
+  place-items: center;
+}
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--c-danger);
+  animation: ring 1.8s var(--ease-out) infinite;
+  pointer-events: none;
+}
+@keyframes ring {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@media (max-width: 640px) {
+  .root {
+    bottom: calc(var(--tabbar-h, 0px) + 12px + env(safe-area-inset-bottom));
+    right: 12px;
+  }
+  .fab {
+    width: 52px;
+    height: 52px;
+  }
+  :global(body[data-buybar]) .root {
+    bottom: calc(var(--tabbar-h, 0px) + 84px + env(safe-area-inset-bottom));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+  }
+}
+@media print {
+  .root {
+    display: none;
+  }
+}

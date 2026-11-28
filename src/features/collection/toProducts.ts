@@ -139,10 +139,10 @@ export function toProduct(item: CollectionItem): Product | null {
     price,
     materials: { ...base, ...variants[0].materials },
     variants,
-    dimensions: dims,
+    dimensions: item.dimensions ?? dims,
     rules,
     model,
-    assets: { glb: null, usdz: null, thumb: item.images[0], gallery: item.images },
+    assets: { glb: item.model3d ?? null, usdz: null, thumb: item.images[0], gallery: item.images },
     highlights: item.details.filter((d) => !/NGỌC MINH$/i.test(d)).slice(0, 4),
   };
 }

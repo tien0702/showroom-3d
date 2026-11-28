@@ -13,6 +13,10 @@ export interface CollectionItem {
   salePrice: number | null;
   images: string[];
   details: string[];
+  /** Imported GLB model ("/models/<slug>.glb"). Without it a built-in model is drawn. */
+  model3d?: string | null;
+  /** Real size in metres used for the 3D model (overrides what is guessed from `size`). */
+  dimensions?: { w: number; d: number; h: number } | null;
 }
 
 export interface CollectionCategory {

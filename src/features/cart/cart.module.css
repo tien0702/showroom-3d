@@ -106,3 +106,75 @@
 .fbLink:hover {
   text-decoration: underline;
 }
+
+/* ---------- Order form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.formIntro {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-3);
+  line-height: 1.45;
+}
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-ink-2);
+}
+.formField em {
+  color: var(--c-danger);
+  font-style: normal;
+}
+.formField input,
+.formField textarea {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 10px 12px;
+  border: 1px solid var(--c-line-strong);
+  border-radius: var(--r-sm);
+  background: var(--c-surface);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--c-ink);
+  resize: vertical;
+}
+.formField input:focus,
+.formField textarea:focus {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+.formField input[aria-invalid] {
+  border-color: var(--c-danger);
+}
+.formError {
+  font-size: var(--fs-sm);
+  color: var(--c-danger);
+  background: var(--c-danger-soft);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+}
+.formActions {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--sp-2);
+}
+.sentIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--c-success-soft);
+  color: var(--c-success);
+}
+.sentTitle {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--c-ink);
+}

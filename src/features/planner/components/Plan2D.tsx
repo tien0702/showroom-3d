@@ -27,6 +27,8 @@ const CATEGORY_TINT: Partial<Record<Product['category'], string>> = {
 
 export function Plan2D() {
   const room = usePlanner((st) => st.room);
+  const editing = usePlanner((st) => st.roomEditor);
+  const focusWall = usePlanner((st) => st.focusWall);
   const items = usePlanner((st) => st.items);
   const showDims = usePlanner((st) => st.showDimensions);
   const svg = useRef<SVGSVGElement>(null);
@@ -108,7 +110,7 @@ export function Plan2D() {
           onPointerUp={() => (panning.current = null)}
           style={{ cursor: 'grab' }}
         />
-        <RoomShape room={room} showDims={showDims} />
+        <RoomShape room={room} showDims={showDims || editing} editing={editing} focusWall={focusWall} />
         {sorted.map(({ it, p }) => (
           <PlanItem key={it.uid} item={it} product={p} toPlan={toPlan} showDims={showDims} />
         ))}
@@ -124,7 +126,7 @@ export function Plan2D() {
   );
 }
 
-const RoomShape = memo(function RoomShape({ room, showDims }: { room: Room; showDims: boolean }) {
+const RoomShape = memo(function RoomShape({ room, showDims, editing, focusWall }: { room: Room; showDims: boolean; editing: boolean; focusWall: string | null }) {
   const outline = useMemo(() => outlineOf(room), [room]);
   const segs = useMemo(() => wallSegments(room), [room]);
   const area = polygonArea(outline);
@@ -139,6 +141,20 @@ const RoomShape = memo(function RoomShape({ room, showDims }: { room: Room; show
       {segs.map((seg) => (
         <WallShape key={seg.wall.id} seg={seg} height={room.height} showDims={showDims} />
       ))}
+      {editing &&
+        segs.map((seg, i) => {
+          const focus = focusWall === seg.wall.id;
+          const mid = add(add(seg.a, scale(seg.dir, seg.length / 2)), scale(seg.normal, seg.wall.thickness / 2 + 0.28));
+          return (
+            <g key={seg.wall.id}>
+              {focus && <line x1={seg.a[0]} y1={seg.a[1]} x2={seg.b[0]} y2={seg.b[1]} className={s.wallFocus} strokeWidth={seg.wall.thickness + 0.08} opacity={0.55} />}
+              <circle cx={mid[0]} cy={mid[1]} r={0.17} className={s.wallNumBg} data-focus={focus || undefined} />
+              <text x={mid[0]} y={mid[1]} className={s.wallNum} textAnchor="middle" dominantBaseline="central">
+                {i + 1}
+              </text>
+            </g>
+          );
+        })}
     </g>
   );
 });

@@ -9,7 +9,12 @@
   z-index: 50;
   background: color-mix(in srgb, var(--c-bg) 82%, transparent);
   backdrop-filter: saturate(1.4) blur(14px);
-  border-bottom: 1px solid var(--c-line);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-med), box-shadow var(--dur-med);
+}
+.header[data-scrolled] {
+  border-bottom-color: var(--c-line);
+  box-shadow: 0 6px 20px rgba(23, 24, 26, 0.05);
 }
 .headerInner {
   height: var(--header-h);
@@ -42,6 +47,98 @@
 }
 .logoText {
   font-size: var(--fs-md);
+  white-space: nowrap;
+}
+.menuBtn {
+  display: none;
+  width: var(--tap);
+  height: var(--tap);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  place-items: center;
+}
+.menuBtn:hover {
+  background: var(--c-surface-2);
+}
+.mobileNav {
+  display: none;
+  overflow: hidden;
+  border-top: 1px solid var(--c-line);
+}
+.mobileNavInner {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--sp-2) var(--sp-4);
+}
+.mobileLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  font-weight: 600;
+  color: var(--c-ink-2);
+  border-bottom: 1px solid var(--c-line);
+}
+.mobileLink:last-child {
+  border-bottom: 0;
+}
+.mobileActive {
+  color: var(--c-ink);
+}
+.mobileActive::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--c-danger);
+  margin-right: 10px;
+}
+.mobileActive {
+  justify-content: flex-start;
+}
+.mobileActive svg {
+  margin-left: auto;
+}
+
+/* ---------- Splash ---------- */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #111214;
+  color: #f1e7d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-6);
+  text-align: center;
+  cursor: pointer;
+}
+.splashLogo {
+  width: min(200px, 46vw);
+  height: auto;
+  margin-bottom: var(--sp-4);
+}
+.splashWelcome {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b9ad94;
+}
+.splashName {
+  font-size: var(--fs-2xl);
+  color: #f1e7d3;
+}
+.splashBar {
+  width: min(160px, 40vw);
+  height: 2px;
+  margin-top: var(--sp-5);
+  background: #d4a64a;
+  transform-origin: left;
+  border-radius: 1px;
 }
 .nav {
   display: flex;
@@ -130,11 +227,19 @@
   justify-content: space-between;
   gap: var(--sp-4);
 }
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav {
-    overflow-x: auto;
-    scrollbar-width: none;
+    display: none;
   }
+  .menuBtn,
+  .mobileNav {
+    display: grid;
+  }
+  .mobileNav {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
   .footerGrid {
     grid-template-columns: 1fr 1fr;
   }
@@ -156,12 +261,88 @@
     grid-template-columns: 1fr;
   }
   .logoText {
-    display: none;
-  }
-  .nav {
-    margin-left: 0;
+    font-size: var(--fs-sm);
   }
   .headerInner {
     gap: var(--sp-2);
+  }
+  .headerEnd {
+    gap: 0;
+  }
+}
+
+/* ---------- Phone bottom tab bar ---------- */
+.tabBar {
+  display: none;
+}
+@media (max-width: 640px) {
+  :root {
+    --tabbar-h: 62px;
+  }
+  .site {
+    padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  }
+  .menuBtn,
+  .mobileNav {
+    display: none !important;
+  }
+  .tabBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 55;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+    padding: 6px 8px env(safe-area-inset-bottom);
+    background: color-mix(in srgb, var(--c-surface) 92%, transparent);
+    backdrop-filter: saturate(1.4) blur(16px);
+    border-top: 1px solid var(--c-line);
+  }
+  .tab {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--c-ink-3);
+    border-radius: var(--r-md);
+    -webkit-tap-highlight-color: transparent;
+    transition: color var(--dur-fast), transform var(--dur-fast);
+  }
+  .tab:active {
+    transform: scale(0.92);
+  }
+  .tab > svg,
+  .tab > span:not(.tabPill) {
+    position: relative;
+    z-index: 1;
+  }
+  .tabActive {
+    color: var(--c-ink);
+  }
+  .tabPill {
+    position: absolute;
+    inset: 2px 6px;
+    border-radius: var(--r-md);
+    background: var(--c-surface-2);
+  }
+  .footer {
+    margin-top: var(--sp-10);
+  }
+  .footerGrid {
+    padding-block: var(--sp-8) var(--sp-6);
+    gap: var(--sp-5);
+  }
+  .footerBrand {
+    width: 112px;
+    padding: var(--sp-3);
+  }
+  .footerInner {
+    font-size: var(--fs-xs);
   }
 }

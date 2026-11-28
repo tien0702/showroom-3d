@@ -1,10 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { FurnishLevel, PlacedItem, Room, Vec2 } from '@/types';
+import type { FurnishLevel, Opening, OpeningType, PlacedItem, Room, Vec2 } from '@/types';
 import { catalog } from '@/features/catalog/api';
 import { furnish, showroomApi } from '@/features/showroom/api';
 import { uid as makeUid } from '@/shared/lib/id';
 import { createContext, findFreeSpot, resolvePlacement, type PlacementIssue } from '../lib/placement';
+import { addOpening, removeOpening, resizeRoom, updateOpening } from '../lib/roomEdit';
 
 export type PlannerView = '2d' | 'split' | '3d';
 export type CameraMode = 'orbit' | 'top' | 'eye';
@@ -17,6 +18,8 @@ export interface Toast {
 
 interface SavedDesign {
   items: PlacedItem[];
+  /** Present only when the visitor changed the room's size, doors or windows. */
+  room?: Room;
   updatedAt: number;
 }
 
@@ -37,6 +40,10 @@ interface PlannerState {
   future: PlacedItem[][];
   toast: Toast | null;
   saved: Record<string, SavedDesign>;
+  /** Room editor (size, doors, windows) is open instead of the catalog. */
+  roomEditor: boolean;
+  /** Wall highlighted on the plan while editing. */
+  focusWall: string | null;
 
   load: (showroomId: string, opts?: { level?: FurnishLevel; addSku?: string; variant?: string }) => boolean;
   select: (uid: string | null) => void;
@@ -57,6 +64,13 @@ interface PlannerState {
   reset: () => void;
   showToast: (message: string, action?: Toast['action']) => void;
   dismissToast: () => void;
+  setRoomEditor: (open: boolean) => void;
+  setFocusWall: (wallId: string | null) => void;
+  resizeRoom: (next: { width?: number; depth?: number; height?: number }) => void;
+  updateOpening: (wallId: string, openingId: string, patch: Partial<Opening>) => void;
+  addOpening: (wallId: string, type: OpeningType) => boolean;
+  removeOpening: (wallId: string, openingId: string) => void;
+  resetRoom: () => void;
 }
 
 const HISTORY_LIMIT = 50;
@@ -71,19 +85,51 @@ export const usePlanner = create<PlannerState>()(
       const ctx = (items = get().items) => createContext(get().room!, items, catalog.map());
 
       /** Record the current items in history, then apply `next`. */
+      /** The showroom's room, or undefined when it is unchanged (so nothing extra is stored). */
+      const customRoom = () => {
+        const { showroomId, room } = get();
+        return showroomId && room !== showroomApi.get(showroomId)?.room ? (room ?? undefined) : undefined;
+      };
+
       const commit = (next: PlacedItem[]) => {
         const { items, past, showroomId, saved } = get();
         set({
           items: next,
           past: [...past, items].slice(-HISTORY_LIMIT),
           future: [],
-          saved: showroomId ? { ...saved, [showroomId]: { items: next, updatedAt: Date.now() } } : saved,
+          saved: showroomId ? { ...saved, [showroomId]: { items: next, room: customRoom(), updatedAt: Date.now() } } : saved,
         });
       };
 
       const persistCurrent = () => {
         const { showroomId, items, saved } = get();
-        if (showroomId) set({ saved: { ...saved, [showroomId]: { items, updatedAt: Date.now() } } });
+        if (showroomId) set({ saved: { ...saved, [showroomId]: { items, room: customRoom(), updatedAt: Date.now() } } });
+      };
+
+      /** Re-run placement for every item so nothing ends up outside or inside a wall. */
+      const fitItems = (room: Room, items: PlacedItem[], move?: (p: Vec2) => Vec2): { items: PlacedItem[]; issues: Record<string, PlacementIssue | null> } => {
+        const products = catalog.map();
+        const issues: Record<string, PlacementIssue | null> = {};
+        const placed: PlacedItem[] = [];
+        for (const it of items) {
+          const product = products.get(it.sku);
+          const position = move ? move(it.position) : it.position;
+          if (!product) {
+            placed.push({ ...it, position });
+            continue;
+          }
+          const r = resolvePlacement(createContext(room, placed, products), { uid: it.uid, product, position, rotationY: it.rotationY });
+          issues[it.uid] = r.issue;
+          placed.push({ ...it, position: r.position, rotationY: r.rotationY, elevation: r.elevation });
+        }
+        return { items: placed, issues };
+      };
+
+      /** Apply a room change: refit items, persist, and clear undo (history only tracks furniture). */
+      const applyRoom = (room: Room, move?: (p: Vec2) => Vec2) => {
+        const fitted = fitItems(room, get().items, move);
+        set({ room, items: fitted.items, issues: fitted.issues, past: [], future: [] });
+        persistCurrent();
       };
 
       return {
@@ -102,20 +148,26 @@ export const usePlanner = create<PlannerState>()(
         future: [],
         toast: null,
         saved: {},
+        roomEditor: false,
+        focusWall: null,
 
         load: (showroomId, opts = {}) => {
           const showroom = showroomApi.get(showroomId);
           if (!showroom) return false;
           const saved = get().saved[showroomId];
-          const items = opts.level || !saved ? furnish(showroom, opts.level ?? 'full') : saved.items;
+          const room = saved?.room ?? showroom.room;
+          let items = opts.level || !saved ? furnish(showroom, opts.level ?? 'full') : saved.items;
+          let issues: Record<string, PlacementIssue | null> = {};
+          // Fresh showroom furniture was laid out for the original room size.
+          if (saved?.room && opts.level) ({ items, issues } = fitItems(room, items));
           set({
             showroomId,
-            room: showroom.room,
+            room,
             items,
             selected: null,
             hovered: null,
             dragging: null,
-            issues: {},
+            issues,
             removing: [],
             past: [],
             future: [],
@@ -256,6 +308,47 @@ export const usePlanner = create<PlannerState>()(
           set({ selected: null, issues: {} });
         },
 
+        setRoomEditor: (roomEditor) => set({ roomEditor, focusWall: null, selected: roomEditor ? null : get().selected }),
+        setFocusWall: (focusWall) => set({ focusWall }),
+
+        resizeRoom: (next) => {
+          const { room } = get();
+          if (!room) return;
+          const r = resizeRoom(room, next);
+          applyRoom(r.room, r.map);
+        },
+
+        updateOpening: (wallId, openingId, patch) => {
+          const { room } = get();
+          if (room) applyRoom(updateOpening(room, wallId, openingId, patch));
+        },
+
+        addOpening: (wallId, type) => {
+          const { room } = get();
+          const next = room && addOpening(room, wallId, type, makeUid());
+          if (!next) {
+            get().showToast('Bức tường này không còn chỗ trống');
+            return false;
+          }
+          applyRoom(next);
+          return true;
+        },
+
+        removeOpening: (wallId, openingId) => {
+          const { room } = get();
+          if (room) applyRoom(removeOpening(room, wallId, openingId));
+        },
+
+        resetRoom: () => {
+          const { showroomId, room } = get();
+          const original = showroomId ? showroomApi.get(showroomId)?.room : undefined;
+          if (!original || !room) return;
+          // Map furniture back proportionally to the original size.
+          const r = resizeRoom(room, { width: roomSizeOf(original).w, depth: roomSizeOf(original).d });
+          applyRoom(original, r.map);
+          get().showToast('Đã khôi phục kích thước phòng gốc');
+        },
+
         showToast: (message, action) => set({ toast: { id: ++toastSeq, message, action } }),
         dismissToast: () => set({ toast: null }),
       };
@@ -270,4 +363,10 @@ export const usePlanner = create<PlannerState>()(
 /** Look up the product and variant for a placed item. */
 export function useSelectedItem() {
   return usePlanner((s) => s.items.find((i) => i.uid === s.selected) ?? null);
+}
+
+function roomSizeOf(room: Room) {
+  const xs = Object.values(room.corners).map((p) => p[0]);
+  const zs = Object.values(room.corners).map((p) => p[1]);
+  return { w: Math.max(...xs) - Math.min(...xs), d: Math.max(...zs) - Math.min(...zs) };
 }

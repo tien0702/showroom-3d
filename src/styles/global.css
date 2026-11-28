@@ -38,6 +38,12 @@ button {
   cursor: pointer;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 a {
   color: inherit;
   text-decoration: none;

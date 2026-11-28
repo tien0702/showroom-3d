@@ -1,0 +1,9 @@
+{
+  "intervalMs": 4500,
+  "banners": [
+    { "id": "b1", "image": "/images/ngoc-minh/banner-1.webp", "title": "Phòng ngủ ấm cúng", "subtitle": "Giường, tủ, bàn trang điểm sản xuất tại xưởng", "link": "/mau-ngoc-minh" },
+    { "id": "b2", "image": "/images/ngoc-minh/banner-2.webp", "title": "Bộ bàn ăn gỗ tự nhiên", "subtitle": "Giá gốc, bảo hành dài hạn", "link": "/mau-ngoc-minh" },
+    { "id": "b3", "image": "/images/ngoc-minh/sf01-3.webp", "title": "Sofa góc chữ L", "subtitle": "Nhiều màu, nhiều kích thước", "link": "/mau-ngoc-minh" },
+    { "id": "b4", "image": "/images/ngoc-minh/sf03-3.webp", "title": "Thử sofa trong phòng 3D", "subtitle": "Kéo thả, đổi màu trước khi mua", "link": "/products" }
+  ]
+}

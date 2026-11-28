@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { catalog, priceOf, variantOf } from '@/features/catalog/api';
@@ -31,6 +31,24 @@ export default function ProductPage() {
   const [image, setImage] = useState(0);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
+  const buyRef = useRef<HTMLDivElement>(null);
+  const [buyHidden, setBuyHidden] = useState(false);
+
+  // Phones: show a sticky buy bar while the main buy buttons are off screen.
+  useEffect(() => {
+    const el = buyRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setBuyHidden(!e.isIntersecting && e.boundingClientRect.top > 0), { rootMargin: '0px 0px -40px 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [product]);
+  useEffect(() => {
+    if (buyHidden) document.body.dataset.buybar = '1';
+    else delete document.body.dataset.buybar;
+    return () => {
+      delete document.body.dataset.buybar;
+    };
+  }, [buyHidden]);
   useDocumentTitle(product?.name);
 
   useEffect(() => {
@@ -143,7 +161,7 @@ export default function ProductPage() {
             </a>
           </div>
 
-          <div className={s.buyRow}>
+          <div className={s.buyRow} ref={buyRef}>
             <QtyStepper value={qty} onChange={setQty} />
             <Button
               variant="primary"
@@ -197,6 +215,37 @@ export default function ProductPage() {
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {buyHidden && (
+          <motion.div
+            className={s.stickyBuy}
+            initial={{ y: '120%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '120%' }}
+            transition={{ type: 'spring', stiffness: 420, damping: 38 }}
+          >
+            <div className={s.stickyInfo}>
+              <span className="truncate">{v.label}</span>
+              <Price value={priceOf(product, v.id) * qty} animated className={s.stickyPrice} />
+            </div>
+            <Button variant="secondary" icon={<Icons.IconCube size={18} />} onClick={() => navigate(roomLink(room.id))} aria-label="Xem trong phòng 3D">
+              3D
+            </Button>
+            <Button
+              variant="primary"
+              icon={added ? <Icons.IconCheck size={18} /> : <Icons.IconBag size={18} />}
+              onClick={() => {
+                if (added) return setCartOpen(true);
+                add(product.sku, v.id, qty);
+                setAdded(true);
+              }}
+            >
+              {added ? 'Xem giỏ' : 'Thêm vào giỏ'}
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {related.length > 0 && (
         <section className={s.section}>

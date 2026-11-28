@@ -102,3 +102,12 @@
   pointer-events: none;
   white-space: nowrap;
 }
+
+@media (hover: none) {
+  .card {
+    transition: transform 180ms var(--ease-out);
+  }
+  .card:active {
+    transform: scale(0.98);
+  }
+}

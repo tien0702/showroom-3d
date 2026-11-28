@@ -1,15 +1,23 @@
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { catalog, priceOf, variantOf } from '@/features/catalog/api';
 import { brand } from '@/app/config';
 import { Button, Drawer, IconButton, Icons, ImageFrame, Price, QtyStepper } from '@/shared/ui';
 import { cartCount, cartTotal, useCart } from './store';
+import { OrderForm } from './OrderForm';
 import s from './cart.module.css';
 
 export function CartDrawer() {
-  const { lines, open, setOpen, setQty, remove } = useCart();
+  const { lines, open, setOpen, setQty, remove, clear } = useCart();
   const count = cartCount(lines);
   const close = () => setOpen(false);
+  const [step, setStep] = useState<'cart' | 'form' | 'sent'>('cart');
+
+  // Start from the cart each time the drawer opens.
+  useEffect(() => {
+    if (open) setStep('cart');
+  }, [open]);
 
   return (
     <Drawer
@@ -17,23 +25,51 @@ export function CartDrawer() {
       onClose={close}
       title={count ? `Giỏ hàng · ${count} món` : 'Giỏ hàng'}
       footer={
-        lines.length > 0 && (
+        lines.length > 0 &&
+        step !== 'sent' && (
           <div className={s.foot}>
             <div className={s.totalRow}>
               <span>Tạm tính</span>
               <Price value={cartTotal(lines)} animated className={s.total} />
             </div>
-            <Button variant="primary" size="lg" block icon={<Icons.IconPhone size={18} />} onClick={() => (window.location.href = `tel:${brand.hotlineTel}`)}>
-              Gọi đặt hàng {brand.hotline}
-            </Button>
-            <a className={s.fbLink} href={brand.facebook} target="_blank" rel="noreferrer">
-              Hoặc nhắn tin qua Facebook
-            </a>
+            {step === 'form' ? (
+              <OrderForm
+                lines={lines}
+                onCancel={() => setStep('cart')}
+                onSent={() => {
+                  clear();
+                  setStep('sent');
+                }}
+              />
+            ) : (
+              <>
+                <Button variant="primary" size="lg" block icon={<Icons.IconMail size={18} />} onClick={() => setStep('form')}>
+                  Đặt hàng
+                </Button>
+                <Button variant="secondary" size="lg" block icon={<Icons.IconPhone size={18} />} onClick={() => (window.location.href = `tel:${brand.hotlineTel}`)}>
+                  Gọi đặt hàng {brand.hotline}
+                </Button>
+                <a className={s.fbLink} href={brand.facebook} target="_blank" rel="noreferrer">
+                  Hoặc nhắn tin qua Facebook
+                </a>
+              </>
+            )}
           </div>
         )
       }
     >
-      {lines.length === 0 ? (
+      {step === 'sent' ? (
+        <div className={s.empty}>
+          <span className={s.sentIcon}>
+            <Icons.IconCheck size={32} />
+          </span>
+          <p className={s.sentTitle}>Đã gửi đơn hàng!</p>
+          <p>Ngọc Minh sẽ gọi lại cho bạn trong giờ làm việc để xác nhận.</p>
+          <Link to="/" onClick={close} className={s.emptyLink}>
+            Tiếp tục xem showroom
+          </Link>
+        </div>
+      ) : lines.length === 0 ? (
         <div className={s.empty}>
           <Icons.IconBag size={40} />
           <p>Chưa có sản phẩm nào</p>
